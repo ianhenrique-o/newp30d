@@ -1,403 +1,1428 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ian Henrique | P30D</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ian Henrique</title>
+<meta name="theme-color" content="#f6f5f2">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700&amp;display=swap"><style>:root{--bg:#101211;--panel:#181b19;--white:#f1f3ed;--muted:#aeb5ae;--soft:#818c82;--line:rgba(230,242,223,.12);--accent:#d0e7a6;--ease:cubic-bezier(.2,.7,.2,1)}
-*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--muted);font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip;font-size:16px;line-height:1.7}button{font:inherit;cursor:pointer}button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}::selection{background:var(--accent);color:#101211}h1,h2,h3,h4,p,ul{margin:0}h1,h2,h3,h4{color:var(--white)}ul{padding:0;list-style:none}svg{flex-shrink:0}button svg{transition:transform .35s var(--ease)}button:hover svg{transform:translateX(4px)}.wrap{width:min(1160px,calc(100% - 112px));margin-inline:auto}.section{padding-block:112px}.section-title{font-size:clamp(28px,3vw,39px);font-weight:550;line-height:1.19;letter-spacing:-1.6px;text-wrap:balance}.muted{color:var(--muted)}.body-copy{font-size:16px;line-height:1.85;color:var(--muted)}.button{min-height:56px;padding:18px 27px;border:1px solid transparent;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;gap:18px;font-size:11px;line-height:1.5;font-weight:650;letter-spacing:1.25px;text-transform:uppercase;transition:background .3s,box-shadow .3s,transform .3s var(--ease);text-align:center}.button-primary{background:var(--accent);color:#182014;box-shadow:0 4px 24px #0002}.button-primary:hover{background:#e0f0c1;box-shadow:0 7px 32px #c9e49b20;transform:translateY(-3px)}.button-primary:active{transform:translateY(0)}
-.nav{position:fixed;inset:0 0 auto;z-index:50;padding:27px 0;transition:padding .3s,background .3s,border .3s;border-bottom:1px solid transparent}.nav.is-scrolled{padding:17px 0;background:#101211ed;backdrop-filter:blur(20px);border-color:var(--line)}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:12px;color:var(--white);letter-spacing:2px;text-transform:uppercase}.brand-dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 16px #c4e58a40}.nav-cta{background:transparent;color:#e6eae2;border:1px solid #dae6d430;border-radius:7px;padding:11px 18px;font-size:9px;font-weight:550;letter-spacing:1px;text-transform:uppercase;transition:background .3s,border-color .3s}.nav-cta:hover{background:#ffffff09;border-color:#d0e7a6aa}
-.hero{position:relative;isolation:isolate;min-height:min(900px,100svh);display:flex;align-items:center;padding:155px 0 105px;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 54%,#232f214a,transparent 55%),linear-gradient(135deg,#171b17 0%,#101211 60%)}.hero::after{content:"";position:absolute;inset:auto 0 0;height:110px;background:linear-gradient(transparent,#101211);z-index:-1}.hero-shell{position:relative;z-index:2}.hero-copy{max-width:750px;will-change:transform}.eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:30px;font-size:10px;color:var(--accent);font-weight:500;letter-spacing:2.5px;text-transform:uppercase}.status-dot{width:5px;height:5px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 5px #d0e7a608}.hero-title{font-weight:500;font-size:clamp(32px,3.3vw,46px);letter-spacing:-1.9px;line-height:1.2;max-width:750px;text-wrap:pretty}.hero-title .muted{color:#aab3a6}.hero-description{margin:28px 0 34px;font-size:15px;font-weight:400;line-height:1.9;max-width:520px;color:#aab3a8}.hero-art{position:absolute;z-index:0;pointer-events:none;right:calc((100vw - min(1160px,100vw - 112px))/2 - 185px);top:50%;width:560px;height:620px;transform:translateY(-48%);opacity:.6;mask-image:linear-gradient(90deg,transparent,#000 25%,#000 85%,transparent)}.art-halo{position:absolute;inset:50px;background:radial-gradient(ellipse,#c5e89617,transparent 65%);filter:blur(20px)}.orbit{position:absolute;top:20px;left:40px;width:520px;height:520px;border:1px solid #c6deaa15;border-radius:50%;transform:rotate(-26deg) scaleX(.82)}.orbit-two{inset:63px auto auto 85px;width:430px;height:430px;opacity:.7}.orbit-three{inset:106px auto auto 129px;width:340px;height:340px;opacity:.5}.orbital-point{position:absolute;width:7px;height:7px;top:126px;right:66px;border-radius:50%;background:#d0e7a6;box-shadow:0 0 26px #d0e7a6;animation:point-breathe 5s infinite}.glass-sheet{position:absolute;width:256px;height:278px;border:1px solid #d5e6c929;border-radius:16px;background:linear-gradient(140deg,#daeec908,#14201222);box-shadow:12px 25px 70px #0003;transition:transform 1s var(--ease)}.sheet-back{left:132px;top:132px;transform:rotate(-13deg) translateY(calc(var(--hero-shift,0px) * -.22));opacity:.55}.sheet-middle{left:174px;top:160px;transform:rotate(-4deg) translateY(calc(var(--hero-shift,0px) * -.1));opacity:.6}.sheet-front{left:209px;top:190px;padding:29px;transform:rotate(7deg) translateY(calc(var(--hero-shift,0px) * .08));background:linear-gradient(140deg,#23301de8,#151c14c9);backdrop-filter:blur(12px)}.glass-sheet>i{display:block;width:55%;height:3px;background:#d0e7a622;margin:34px}.art-profile{width:38px;height:38px;border:1px solid #d0e7a654;border-radius:50%;background:radial-gradient(circle at 33% 27%,#c7e39c30,transparent)}.art-lines{margin-top:22px}.art-lines i{display:block;width:84%;height:3px;background:#d0e7a632;margin-bottom:10px}.art-lines i+ i{width:59%;background:#d0e7a619}.art-grid{display:flex;gap:8px;margin-top:24px}.art-grid b{display:block;width:60px;height:64px;border:1px solid #d0e7a626;border-radius:4px;background:linear-gradient(145deg,#d0e7a610,transparent)}.art-grid b:nth-child(2){background:linear-gradient(35deg,#d0e7a619,transparent)}.art-bottom{width:32px;height:3px;background:#d0e7a670;margin:20px 0 0 auto}.hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#10121120,transparent)}@keyframes point-breathe{50%{opacity:.3;box-shadow:0 0 5px #d0e7a6}}
-.problem-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:100px;align-items:start}.problem .section-title{max-width:430px}.problem .section-title br{display:none}.problem .section-title .muted{display:block;margin-top:8px}.prose>p{font-size:16px;line-height:1.9}.plain-statement{margin-top:28px;background:none;border:none;padding:0}.statement-text{font-size:19px;color:var(--accent);font-weight:500;letter-spacing:-.4px}.intro{position:relative;padding-block:86px;background:#e6e9df;color:#222920;overflow:hidden}.intro::after{content:"";position:absolute;right:-190px;top:-300px;width:700px;height:700px;border:1px solid #526b3420;border-radius:50%;box-shadow:0 0 0 46px #526b3405,0 0 0 93px #526b3404;pointer-events:none}.intro-copy{max-width:900px;position:relative;z-index:1}.intro-statement{font-size:clamp(24px,2.5vw,34px);font-weight:450;line-height:1.5;letter-spacing:-1px;color:#273024;text-wrap:pretty}
-.timeline{position:relative;padding:0;border:0;background:#101411}.timeline-sticky{position:relative;padding-block:105px;overflow:hidden}.timeline-backdrop{position:absolute;right:-15px;bottom:-170px;pointer-events:none;color:#d1e3bd;opacity:.025;line-height:1}.timeline-number{font-size:620px;font-weight:600;letter-spacing:-55px}.timeline-layout{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:center}.timeline-heading .section-title{font-size:32px;max-width:330px}.timeline-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:32px;max-width:420px}.step-button{position:relative;display:flex;align-items:center;justify-content:space-between;gap:14px;min-width:0;min-height:74px;padding:20px 18px;background:#273024;border:0;border-radius:10px;text-align:left;color:#d3dccd;cursor:pointer;box-shadow:0 5px 16px #00000012;transition:background .25s,color .25s,transform .25s,box-shadow .25s}.step-label{font-size:18px;font-weight:550;letter-spacing:-.4px}.step-arrow{width:16px;height:16px;opacity:.6;flex-shrink:0;transition:transform .25s,opacity .25s}.step-button.is-active{color:#192313;background:var(--accent);box-shadow:0 6px 24px #d0e7a612}.step-button.is-active .step-arrow{opacity:1;transform:rotate(90deg)}.step-button:hover{background:#35432e;color:var(--white);transform:translateY(-2px);box-shadow:0 8px 22px #0002}.step-button.is-active:hover{background:#deedc1;color:#192313}.step-button:active{transform:translateY(0)}.step-button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.timeline-stack{display:grid;grid-template-columns:1fr;align-items:start;gap:0;min-width:0}.timeline-card{grid-area:1/1;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(16px);transition:none;scroll-margin-top:95px;position:relative;min-width:0;background:linear-gradient(150deg,#252e2270,#191f1970);border:0;border-radius:16px;padding:38px;box-shadow:0 12px 40px #0000000a}.stage-eyebrow{font-family:Inter,Arial,sans-serif;color:#a5b697;text-transform:uppercase;letter-spacing:2px;font-size:9px;font-weight:500;margin-bottom:12px}.stage-title{color:var(--white);font-size:34px;font-weight:500;letter-spacing:-1.3px;line-height:1.2;margin-bottom:20px}.stage-copy{font-size:14px;line-height:1.8;margin-bottom:15px}.stage-prompt{font-size:12px;color:#95a48f;margin-bottom:13px}.stage-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin-bottom:25px}.stage-item{display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.65;color:#c4ccbf}.bullet{width:3px;height:3px;border-radius:50%;background:#c6d4ba;flex-shrink:0;margin-top:8px}.stage-result{border:0;padding-top:12px;font-size:14px;color:#e1e9d9;font-weight:450;line-height:1.8}.stage-result-copy{font-size:13px;color:#aebba5}.stage-result-copy+ .stage-result-copy{margin-top:8px;color:#e1e9d9}.timeline-card.is-active{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition:opacity .35s var(--ease),transform .4s var(--ease)}
-.section-heading{margin-bottom:46px}.deliverables-layout{display:block}.deliverables-layout .section-heading{margin-bottom:38px}.deliverables-copy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:46px;color:#c8cfc3;font-size:15px;font-weight:400;line-height:1.8;letter-spacing:-.1px}.deliverables-group{display:flex;flex-direction:column;gap:18px;margin:0;padding:0;list-style:none}.deliverables-group li{display:flex;align-items:flex-start;gap:11px}.delivery-check{display:block;flex:0 0 14px;width:14px;height:14px;margin-top:6px;color:#89cf87}.deliverables-group li>span{min-width:0}.process{border-top:1px solid var(--line)}.process-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px}.process-intro .section-title{margin-bottom:22px}.process-intro .body-copy{max-width:330px}.process-intro .body-copy+ .body-copy{margin-top:12px}.process-sequence{display:flex;align-items:center;gap:15px;padding-block:16px 29px;border-bottom:1px solid var(--line);flex-wrap:wrap}.sequence-step{font-size:11px;font-weight:500;color:var(--accent);letter-spacing:.4px}.sequence-arrow{color:#66775b;font-size:15px}.process-note{padding-top:25px;border:0;background:transparent}.process-note-title{font-size:16px;color:#e4e9df;margin-bottom:10px}.process-note .body-copy{font-size:14px;line-height:1.9}.audience{padding-top:12px;padding-bottom:60px}.audience-panel{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px 90px;padding:45px 0 50px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.audience-panel>.section-title{grid-column:1;grid-row:1;font-size:29px;align-self:end}.audience-panel>.body-copy{grid-column:1;grid-row:2;max-width:300px}.audience-list{grid-column:2;grid-row:1/3;display:flex;flex-direction:column;gap:18px}.audience-item{display:flex;gap:14px;align-items:baseline;font-size:14px;line-height:1.8;color:#bcc6b4}.check-mark{width:9px;height:5px;border-left:1px solid var(--accent);border-bottom:1px solid var(--accent);transform:rotate(-45deg) translateY(-3px);flex-shrink:0}
-.investment{padding-top:60px}.investment-shell{max-width:1160px;margin:auto}.investment-panel{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0 80px;padding:64px;background:radial-gradient(ellipse at 90% 120%,#d0e7a615,transparent 60%),#1b221a;border:1px solid #d0e7a625;border-radius:18px;overflow:hidden}.investment-panel>.section-title{grid-column:1;grid-row:1;margin-bottom:26px;font-size:26px}.price{grid-column:1;grid-row:2;display:flex;align-items:flex-start;gap:9px}.price-currency{font-size:17px;line-height:2.5;color:#b9c7ae}.price-amount{color:var(--white);font-size:72px;font-weight:500;letter-spacing:-4px;line-height:1}.price-term{grid-column:1;grid-row:3;text-transform:uppercase;color:#a0b191;letter-spacing:2px;font-size:9px;margin-top:13px}.installment{grid-column:1;grid-row:4;margin-top:22px;font-size:13px;color:#c8d3be}.investment-copy{grid-column:2;grid-row:1/4;align-self:center;font-size:16px;line-height:1.9;max-width:360px}.investment-panel>.button{grid-column:2;grid-row:4;align-self:end;width:100%;font-size:10px;padding-inline:16px}.final-cta{position:relative;padding-block:80px 100px;overflow:hidden}.final-content{display:flex;flex-direction:column;align-items:center;text-align:center}.final-content .section-title{max-width:720px;font-size:32px;line-height:1.35}.final-content .button{margin-top:34px}.footer{padding:25px 0 33px;color:#7d8975;font-size:9px;letter-spacing:1.7px;text-transform:uppercase;border-top:1px solid var(--line)}.reveal{opacity:1;transform:none}.motion-ready .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .9s var(--ease)}.motion-ready .reveal.is-visible{opacity:1;transform:none}.motion-ready .hero-reveal{animation:hero-in .9s var(--ease) both}.hero-reveal:nth-child(2){animation-delay:.07s}.hero-reveal:nth-child(3){animation-delay:.14s}.hero-reveal:nth-child(4){animation-delay:.21s}@keyframes hero-in{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}::-webkit-scrollbar{width:7px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:#4b5944;border-radius:5px}
-@media(min-width:1600px){.hero-art{right:calc((100vw - 1160px)/2 - 100px)}}
-@media(max-width:1100px){.deliverables-copy{gap:30px}.wrap{width:calc(100% - 72px)}.hero-title{max-width:670px;font-size:40px}.hero-art{right:-150px;opacity:.35}.hero-copy{max-width:680px}.problem-grid,.timeline-layout,.process-layout,.audience-panel{gap:55px}.timeline-card{padding:30px}.stage-list{gap:10px 17px}.investment-panel{padding:48px;gap:0 55px}}
-@media(max-width:999px){.timeline-layout{display:block}.timeline-heading .section-title{max-width:520px;font-size:31px}.timeline-nav{max-width:none;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px;margin-bottom:28px}.step-button{min-height:70px;padding:18px 15px}.step-label{font-size:17px}.timeline-card{padding:32px}.stage-title{font-size:30px}.stage-list{grid-template-columns:1fr 1fr}.timeline-backdrop{display:none}.stage-result{font-size:13px}.stage-copy{font-size:13px}.stage-list{grid-template-columns:1fr}.investment-panel{gap:0 35px}.investment-panel>.button{font-size:9px;letter-spacing:.8px}}
-@media(max-width:760px){.deliverables-layout .section-heading{margin-bottom:30px}.deliverables-copy{grid-template-columns:1fr;gap:28px;font-size:15px}.deliverables-group{gap:15px}.wrap{width:calc(100% - 44px)}.section{padding-block:72px}.nav{padding:23px 0}.brand{font-size:10px;letter-spacing:1.8px}.nav-cta{display:none}.hero{padding:133px 0 80px;min-height:0}.hero-copy{max-width:600px}.hero-title{font-size:34px;line-height:1.22;letter-spacing:-1.25px;max-width:580px}.hero-description{font-size:14px;line-height:1.85;margin-top:23px;margin-bottom:29px;max-width:420px}.eyebrow{font-size:9px;margin-bottom:26px;letter-spacing:2px}.hero-art{width:460px;right:-290px;top:46%;opacity:.25}.button{font-size:10px;padding:17px 19px;gap:12px;letter-spacing:.8px;min-height:53px}.hero .button{max-width:100%}.section-title{font-size:30px;letter-spacing:-1.1px}.problem-grid{grid-template-columns:1fr;gap:27px}.problem .section-title{max-width:520px}.prose>p{font-size:15px}.statement-text{font-size:18px}.intro{padding-block:58px}.intro-statement{font-size:25px;letter-spacing:-.6px;line-height:1.5}.timeline{padding-block:0}.timeline-sticky{padding-block:70px}.timeline-layout{display:block}.timeline-heading .section-title{font-size:28px;max-width:370px}.timeline-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:24px}.step-button{min-height:66px;padding:17px 16px;gap:12px}.step-label{font-size:17px}.step-arrow{width:15px;height:15px}.timeline-card{padding:28px 25px}.stage-title{font-size:30px}.stage-list{grid-template-columns:1fr 1fr;gap:12px 21px}.stage-copy{font-size:14px}.stage-result{font-size:14px}.stage-prompt{font-size:12px}.section-heading{margin-bottom:30px}.process-layout{grid-template-columns:1fr;gap:14px}.process-intro .body-copy{max-width:450px;font-size:15px}.process-sequence{justify-content:space-between;gap:10px;padding-top:12px}.sequence-step{font-size:10px}.process-note-title{font-size:15px}.audience{padding-top:0;padding-bottom:34px}.audience-panel{display:block;padding-block:37px}.audience-panel>.body-copy{margin-top:18px;font-size:15px;max-width:360px}.audience-list{margin-top:29px;gap:18px}.audience-item{font-size:13px}.investment{padding-block:30px 50px}.investment-panel{display:flex;flex-direction:column;padding:35px 27px;border-radius:13px}.investment-panel>.section-title{font-size:25px;margin-bottom:27px}.price-amount{font-size:66px}.price-term{margin-top:11px}.installment{margin-top:19px}.investment-copy{margin-top:30px;font-size:14px;align-self:stretch;max-width:100%;padding-top:25px;border-top:1px solid var(--line)}.investment-panel>.button{margin-top:28px;font-size:9px;padding-inline:12px}.final-cta{padding-block:34px 70px}.final-content .section-title{font-size:27px;max-width:520px}.final-content .button{margin-top:27px}.footer{padding-block:23px;text-align:center}.motion-ready .hero-reveal{animation-duration:.65s}}
-@media(max-width:380px){.wrap{width:calc(100% - 36px)}.hero-title{font-size:30px}.hero .button{font-size:9px;padding-inline:16px;gap:10px}.stage-list{grid-template-columns:1fr}.timeline-nav{gap:9px}.step-button{padding:16px 13px}.step-label{font-size:16px}.investment-panel{padding:30px 22px}.investment-panel>.button{font-size:8px}.final-content .button{font-size:9px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.motion-ready .reveal{opacity:1!important;transform:none!important}.hero-copy{transform:none!important;opacity:1!important}}
-</style></head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;450;500;550;600;650;700&amp;display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --paper: #f6f5f2;
+    --ink: #20201f;
+    --muted: #484844;
+    --line: #dddcd7;
+    --ease: cubic-bezier(.2,.7,.2,1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--muted);
+    font: 400 16px/1.68 Inter, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+}
+
+h1,
+h2,
+p,
+figure {
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+    color: var(--ink);
+    text-wrap: pretty;
+}
+
+h1 {
+    font-size: clamp(38px, 3.75vw, 53px);
+    line-height: 1.12;
+    letter-spacing: -1.7px;
+}
+
+h2 {
+    font-size: clamp(30px, 2.65vw, 37px);
+    line-height: 1.17;
+    letter-spacing: -.7px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 6px;
+}
+
+::selection {
+    background: #272727;
+    color: #fff;
+}
+
+.wrap {
+    width: min(1160px, calc(100% - 112px));
+    margin-inline: auto;
+}
+
+.section {
+    padding: 112px 0;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 95px;
+    align-items: center;
+}
+
+.prose p,
+.hero-copy > p:first-of-type,
+.proof-intro > p,
+.month-columns p,
+.investment-options p,
+.about-content .prose p,
+.final p {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.68;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.prose p + p {
+    margin-top: 21px;
+}
+
+p strong {
+    font-weight: 600;
+    color: var(--ink);
+}
+
+/* BOTÕES */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    min-height: 55px;
+    padding: 17px 23px;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: .65px;
+    text-transform: uppercase;
+    text-align: center;
+    transition:
+        background .25s,
+        transform .25s,
+        box-shadow .25s;
+}
+
+.button svg {
+    flex-shrink: 0;
+    transition: transform .25s;
+}
+
+.button:hover {
+    background: #3a3a38;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px #00000010;
+}
+
+.button:hover svg {
+    transform: translateX(4px);
+}
+
+/* NAVEGAÇÃO */
+
+.nav {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 50;
+    padding: 25px 0;
+    transition: padding .3s, background .3s;
+}
+
+.nav.is-scrolled {
+    padding: 16px 0;
+    background: #f6f5f2ef;
+    backdrop-filter: blur(18px);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.brand i {
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: var(--ink);
+    border-radius: 50%;
+}
+
+.nav .button {
+    background: transparent;
+    color: var(--ink);
+    min-height: 38px;
+    padding: 8px 0;
+    font-size: 10px;
+}
+
+.nav .button svg {
+    width: 14px;
+}
+
+/* CAPA */
+
+.hero {
+    position: relative;
+    padding: 145px 0 92px;
+    min-height: 830px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.22fr .88fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-copy {
+    max-width: 620px;
+}
+
+.hero-copy > p:first-of-type {
+    margin: 27px 0 28px;
+}
+
+.portrait {
+    position: relative;
+    background: #e5e4df;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero-portrait {
+    aspect-ratio: 4/5;
+    max-height: 590px;
+    width: 100%;
+    border-radius: 180px 180px 5px 5px;
+}
+
+.portrait img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.portrait.loaded img {
+    opacity: 1;
+}
+
+.portrait img[hidden] {
+    display: none;
+}
+
+.portrait.loaded .portrait-placeholder {
+    display: none;
+}
+
+.portrait-placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: #a7a69f;
+    background: linear-gradient(145deg, #ecebe6, #d9d8d2);
+}
+
+.portrait-placeholder svg {
+    width: 70px;
+    height: 70px;
+    opacity: .45;
+}
+
+.hero-portrait::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 17%;
+    background: linear-gradient(transparent, #0000000b);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* TRABALHOS E CARROSSEL */
+
+.proof {
+    background: #ecebe7;
+    padding-top: 86px;
+    overflow: hidden;
+}
+
+.proof-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 95px;
+    align-items: center;
+}
+
+.proof-intro h2 {
+    max-width: 450px;
+}
+
+.marquee {
+    --gap: 24px;
+    --card-width: clamp(280px, 26vw, 350px);
+    margin: 48px 0 30px;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(
+        90deg,
+        transparent,
+        #000 3%,
+        #000 97%,
+        transparent
+    );
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: proof-loop var(--marquee-duration, 74s) linear infinite;
+    will-change: transform;
+}
+
+.marquee-group {
+    display: flex;
+    gap: var(--gap);
+    padding-right: var(--gap);
+    flex-shrink: 0;
+}
+
+.proof-card {
+    width: var(--card-width);
+    flex-shrink: 0;
+}
+
+.proof-image {
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    background: #deddd7;
+    border-radius: 5px;
+}
+
+.proof-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    opacity: 0;
+    background: #fff;
+}
+
+.proof-image.loaded img {
+    opacity: 1;
+}
+
+.proof-image.loaded .image-placeholder {
+    display: none;
+}
+
+.proof-image img[hidden] {
+    display: none;
+}
+
+.image-placeholder {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    color: #9c9b95;
+    background: linear-gradient(135deg, #e4e3de, #dcdad4);
+}
+
+.proof-note {
+    max-width: 850px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #60605a;
+}
+
+@keyframes proof-loop {
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* SEÇÕES CENTRAIS */
+
+.problem {
+    padding-block: 120px;
+}
+
+.foundation {
+    background: #232322;
+    color: #d6d6ce;
+}
+
+.foundation h2 {
+    color: #f1f0e9;
+}
+
+.foundation .prose p:last-child {
+    color: #eeede6;
+}
+
+.foundation p strong {
+    color: #fff;
+}
+
+.wide-title {
+    max-width: 770px;
+    margin-bottom: 44px;
+}
+
+.production {
+    position: relative;
+    background: #f0efeb;
+}
+
+.production > .wrap {
+    max-width: 1060px;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.production .wide-title {
+    margin: 0;
+    max-width: 390px;
+}
+
+.month-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 610px;
+}
+
+.month-columns p {
+    margin: 0;
+    padding: 0;
+}
+
+.responsibilities {
+    padding-block: 112px;
+}
+
+.included {
+    background: #e9e8e2;
+}
+
+.included h2 {
+    max-width: 350px;
+}
+
+.included .prose p:last-child {
+    font: 500 17px/1.65 Inter, Arial, sans-serif;
+    color: #30302d;
+}
+
+.reading-section > .wrap {
+    max-width: 1060px;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.reading-section h2 {
+    max-width: 390px;
+}
+
+.reading-section .prose {
+    max-width: 610px;
+}
+
+.reading-chunk {
+    display: block;
+}
+
+.reading-chunk + .reading-chunk {
+    margin-top: 17px;
+}
+
+.audience h2 {
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+/* INVESTIMENTO */
+
+.investment {
+    padding-top: 36px;
+}
+
+.investment .wide-title {
+    max-width: 820px;
+}
+
+.investment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.investment-options p {
+    padding: 40px;
+    background: #252524;
+    color: #e0e0d8;
+    border-radius: 4px;
+    line-height: 1.72;
+}
+
+.investment-options p + p {
+    background: #e9e8e2;
+    color: #494945;
+}
+
+.investment-options strong {
+    font-weight: 650;
+    color: #fff;
+}
+
+.investment-options p + p strong {
+    color: #232321;
+}
+
+/* SOBRE */
+
+.about {
+    background: #eeede8;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: .75fr 1.1fr;
+    gap: 105px;
+    align-items: center;
+    max-width: 1060px;
+}
+
+.about-portrait {
+    aspect-ratio: 4/5;
+    border-radius: 4px;
+    max-width: 390px;
+    width: 100%;
+}
+
+.about-content h2 {
+    max-width: 450px;
+    margin-bottom: 28px;
+}
+
+/* CTA FINAL */
+
+.final {
+    background: #232322;
+    color: #d6d6ce;
+    text-align: center;
+    padding-block: 104px 110px;
+}
+
+.final-copy {
+    max-width: 800px;
+}
+
+.final h2 {
+    max-width: 700px;
+    margin: 0 auto 28px;
+    color: #f1f0e9;
+    font-size: 44px;
+}
+
+.final p {
+    max-width: 660px;
+    margin-inline: auto;
+    line-height: 1.7;
+}
+
+.final p + p {
+    margin-top: 20px;
+}
+
+.final .button {
+    margin-top: 33px;
+    background: #f1f0e9;
+    color: #22221f;
+}
+
+.final .button:hover {
+    background: #fff;
+}
+
+.footer {
+    background: #232322;
+    color: #91918b;
+    padding: 25px 0;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    border-top: 1px solid #ffffff0c;
+}
+
+/* ANIMAÇÕES */
+
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.motion-ready .reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        opacity .55s var(--ease),
+        transform .6s var(--ease);
+}
+
+.motion-ready .reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a9a8a1;
+    border-radius: 4px;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .wrap {
+        width: calc(100% - 72px);
+    }
+
+    .hero-grid {
+        gap: 38px;
+        grid-template-columns: 1.2fr .9fr;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-portrait {
+        min-height: 470px;
+        aspect-ratio: auto;
+    }
+
+    .split,
+    .proof-intro {
+        gap: 50px;
+    }
+
+    .about-layout {
+        gap: 65px;
+    }
+
+    .investment-options p {
+        padding: 30px;
+    }
+
+    .reading-section > .wrap,
+    .production > .wrap {
+        gap: 40px;
+        grid-template-columns: .85fr 1.15fr;
+    }
+
+    .audience h2 {
+        font-size: 32px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 760px) {
+    body {
+        font-size: 15.5px;
+        line-height: 1.65;
+    }
+
+    .wrap {
+        width: calc(100% - 44px);
+    }
+
+    .section {
+        padding-block: 70px;
+    }
+
+    .nav {
+        padding: 22px 0;
+    }
+
+    .brand {
+        font-size: 10px;
+    }
+
+    .nav .button {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 0 65px;
+        min-height: 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+        letter-spacing: -1.1px;
+        line-height: 1.14;
+    }
+
+    .hero-copy > p:first-of-type {
+        margin: 24px 0 27px;
+    }
+
+    .hero-portrait {
+        aspect-ratio: 5/4;
+        min-height: 0;
+        max-height: 470px;
+        max-width: 500px;
+        border-radius: 110px 110px 4px 4px;
+    }
+
+    .hero-portrait img {
+        object-position: 50% 32%;
+    }
+
+    .button {
+        font-size: 10.5px;
+        line-height: 1.5;
+        letter-spacing: .6px;
+        padding: 17px 20px;
+        gap: 16px;
+        min-height: 54px;
+    }
+
+    .split,
+    .proof-intro {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    h2,
+    .audience h2 {
+        font-size: 30px;
+        line-height: 1.17;
+        letter-spacing: -.55px;
+    }
+
+    .prose p,
+    .hero-copy > p:first-of-type,
+    .proof-intro > p,
+    .month-columns p,
+    .investment-options p,
+    .about-content .prose p,
+    .final p {
+        font-size: 15.5px;
+        line-height: 1.65;
+    }
+
+    .prose p + p {
+        margin-top: 20px;
+    }
+
+    .marquee {
+        --gap: 16px;
+        --card-width: 280px;
+        margin: 34px 0 25px;
+    }
+
+    .proof-image {
+        height: 410px;
+    }
+
+    .proof-note {
+        font-size: 12.5px;
+        line-height: 1.65;
+    }
+
+    .wide-title {
+        margin-bottom: 29px;
+    }
+
+    .reading-section > .wrap,
+    .production > .wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .reading-section h2,
+    .reading-section .prose,
+    .production .wide-title,
+    .month-columns {
+        max-width: 100%;
+    }
+
+    .month-columns {
+        gap: 24px;
+    }
+
+    .reading-chunk + .reading-chunk {
+        margin-top: 16px;
+    }
+
+    .included h2 {
+        max-width: none;
+    }
+
+    .included .prose p:last-child {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .investment-options {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .investment-options p {
+        padding: 28px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-portrait {
+        aspect-ratio: 5/4;
+        max-width: 500px;
+    }
+
+    .about-content h2 {
+        margin-bottom: 23px;
+    }
+
+    .final h2 {
+        font-size: 32px;
+        line-height: 1.18;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .wrap {
+        width: calc(100% - 36px);
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    h2,
+    .audience h2 {
+        font-size: 28px;
+    }
+
+    .button {
+        font-size: 10px;
+        padding-inline: 17px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .motion-ready .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .button,
+    .button svg,
+    .nav {
+        transition: none;
+    }
+}
+</style>
+</head>
+
 <body>
 
-    
-    <nav id="navbar" class="nav">
-        <div class="nav-inner wrap">
-            <div class="brand">
-                <div class="brand-dot"></div>
-                Ian Henrique
-            </div>
-            <button onclick="irParaConversa()" class="nav-cta" type="button">
-                Quero profissionalizar o meu perfil
-            </button>
+<!-- NAVEGAÇÃO -->
+<nav class="nav" id="navbar" aria-label="Navegação principal">
+    <div class="wrap nav-inner">
+        <a class="brand" href="#inicio">
+            <i aria-hidden="true"></i>
+            Ian Henrique
+        </a>
+
+        <a
+            class="button"
+            href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram."
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Quero conversar sobre meu projeto.
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14m-6-6 6 6-6 6"></path>
+            </svg>
+        </a>
+    </div>
+</nav>
+
+<!-- SEÇÃO 1 -->
+<section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+        <div class="hero-copy">
+            <h1>Eu organizo o seu Instagram e cuido da produção dos seus conteúdos durante 90 dias.</h1>
+
+            <p>No primeiro mês eu organizo posicionamento, perfil, mensagem e direção de conteúdo, e nos dois meses seguintes continuo produzindo, testando formatos e ajustando o que estiver trazendo mais alcance, visitas ao perfil e oportunidades para o seu negócio.</p>
+
+            <a
+                class="button"
+                href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram."
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Quero conversar sobre meu projeto.
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14m-6-6 6 6-6 6"></path>
+                </svg>
+            </a>
         </div>
-    </nav>
 
-    
-    <section class="hero" id="inicio">
-        <div class="hero-shell wrap">
-            <div class="hero-copy">
-                <div class="hero-reveal">
-                    <div class="eyebrow">
-                        <span class="status-dot"></span>
-                        Método P30D
-                    </div>
-                </div>
-
-                <div class="hero-reveal">
-                    <h1 class="hero-title">
-                        Em 30 dias, vou transformar o seu perfil parado ou confuso
-                        <span class="muted">em uma presença digital clara, profissional e pronta para sustentar uma rotina de crescimento.</span>
-                    </h1>
-                </div>
-
-                <div class="hero-reveal">
-                    <p class="hero-description">
-                        Para profissionais que desejam atrair mais leads para o seu negócio através do instagram, mas não sabem como.
-                    </p>
-                </div>
-
-                <div class="hero-reveal">
-                    <button onclick="irParaConversa()" class="button button-primary" type="button">
-                        Quero profissionalizar o meu perfil
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    <div class="hero-art" aria-hidden="true"><div class="art-halo"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="orbital-point"></div><div class="glass-sheet sheet-back"><i></i><i></i><i></i></div><div class="glass-sheet sheet-middle"><i></i><i></i><i></i></div><div class="glass-sheet sheet-front"><div class="art-profile"></div><div class="art-lines"><i></i><i></i></div><div class="art-grid"><b></b><b></b><b></b></div><div class="art-bottom"></div></div></div></section>
-
-    
-    <section class="problem section">
-        <div class="wrap">
-            <div class="problem-grid reveal">
-                <h2 class="section-title">
-                    Tem muito profissional bom <br>
-                    <span class="muted">com um Instagram parado no tempo.</span>
-                </h2>
-                <div class="problem-body prose">
-                    <p>A pessoa trabalha, atende clientes, entrega um serviço sério, mas quando alguém entra no perfil encontra uma bio genérica, conteúdos sem continuidade, destaques antigos e pouca clareza sobre o que aquele profissional realmente faz.</p>
-                    <div class="plain-statement">
-                        <p class="statement-text">O P30D foi criado para organizar isso.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section class="intro section">
-        <div class="wrap">
-            <div class="intro-copy reveal">
-                <p class="intro-statement">
-                    Durante 30 dias, eu entro no seu negócio, entendo o que você vende, quem queremos atrair e quais assuntos precisam aparecer com frequência no seu perfil.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="timeline-container" class="timeline section">
-        <div class="timeline-sticky">
-
-            <div id="timeline-bg-number" class="timeline-backdrop">
-                <span id="timeline-number" class="timeline-number">01</span>
+        <figure class="portrait hero-portrait">
+            <div class="portrait-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <circle cx="40" cy="28" r="12"></circle>
+                    <path d="M17 66c0-15 10-23 23-23s23 8 23 23"></path>
+                    <rect x="6" y="6" width="68" height="68" rx="6"></rect>
+                </svg>
             </div>
 
-            <div class="timeline-layout wrap">
+            <img
+                src="fotoCapa.jpg"
+                alt="Ian Henrique"
+                decoding="async"
+                fetchpriority="high"
+                onload="this.parentElement.classList.add('loaded')"
+                onerror="this.hidden=true"
+            >
+        </figure>
+    </div>
+</section>
 
-                
-                <div class="timeline-sidebar">
-                    <div class="timeline-heading">
-                        <h2 class="section-title">A partir daí, organizamos sua presença digital em quatro etapas.</h2>
-                    </div>
+<!-- SEÇÃO 2 -->
+<section class="proof section" id="trabalhos">
+    <div class="wrap proof-intro reveal">
+        <h2>Alguns trabalhos que já passaram pela minha mão.</h2>
 
-                    <div class="timeline-nav" aria-label="Etapas do método">
-                        <button class="step-button is-active" type="button" data-step="0" aria-current="step" aria-pressed="true" aria-controls="etapa-1">
-                            <span class="step-label">Direção</span>
-                            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"></path></svg>
-                        </button>
-                        <button class="step-button" type="button" data-step="1" aria-pressed="false" aria-controls="etapa-2">
-                            <span class="step-label">Perfil</span>
-                            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"></path></svg>
-                        </button>
-                        <button class="step-button" type="button" data-step="2" aria-pressed="false" aria-controls="etapa-3">
-                            <span class="step-label">Conteúdo</span>
-                            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"></path></svg>
-                        </button>
-                        <button class="step-button" type="button" data-step="3" aria-pressed="false" aria-controls="etapa-4">
-                            <span class="step-label">Ativação</span>
-                            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"></path></svg>
-                        </button>
-                    </div>
-                </div>
+        <p>Um dos projetos que melhor representa meu trabalho é o da Dra. Fáthima Oliveira, que estava na faixa de 8 mil seguidores quando começamos e passou de 50 mil durante os meses em que trabalhamos posicionamento, conteúdo e produtos juntos.</p>
+    </div>
 
-                
-                <div class="timeline-stack">
+    <div class="marquee" role="region" aria-label="Trabalhos e resultados">
+        <div class="marquee-track">
 
-                    
-                    <div class="timeline-card is-active" id="etapa-1" aria-labelledby="etapa-titulo-1">
-                        <h3 class="stage-eyebrow">Etapa 1</h3>
-                        <h4 class="stage-title" id="etapa-titulo-1">Direção</h4>
-                        <p class="stage-copy">Primeiro eu preciso entender o negócio.</p>
-                        <p class="stage-copy stage-prompt">Vamos definir:</p>
-                        <ul class="stage-list">
-                            <li class="stage-item"><span class="bullet"></span>Quem queremos atrair</li>
-                            <li class="stage-item"><span class="bullet"></span>Qual serviço será priorizado</li>
-                            <li class="stage-item"><span class="bullet"></span>Quais problemas seu público realmente percebe</li>
-                            <li class="stage-item"><span class="bullet"></span>Como você trabalha</li>
-                            <li class="stage-item"><span class="bullet"></span>Quais provas já existem</li>
-                            <li class="stage-item"><span class="bullet"></span>Quais assuntos têm potencial para sustentar sua comunicação</li>
-                        </ul>
-                        <p class="stage-result">Você recebe uma direção clara para o perfil e para os próximos conteúdos.</p>
-                    </div>
-
-                    
-                    <div class="timeline-card" id="etapa-2" aria-hidden="true" aria-labelledby="etapa-titulo-2">
-                        <h3 class="stage-eyebrow">Etapa 2</h3>
-                        <h4 class="stage-title" id="etapa-titulo-2">Perfil</h4>
-                        <p class="stage-copy">Depois organizamos o lugar para onde as pessoas estão chegando.</p>
-                        <p class="stage-copy stage-prompt">Eu estruturo:</p>
-                        <ul class="stage-list">
-                            <li class="stage-item"><span class="bullet"></span>Bio</li>
-                            <li class="stage-item"><span class="bullet"></span>Página de links</li>
-                            <li class="stage-item"><span class="bullet"></span>Conteúdos fixados</li>
-                            <li class="stage-item"><span class="bullet"></span>Destaques</li>
-                            <li class="stage-item"><span class="bullet"></span>E a lógica geral do perfil</li>
-                        </ul>
-                        <p class="stage-result">A ideia é simples: alguém novo precisa entrar e conseguir entender rapidamente com o que você trabalha e por onde avançar.</p>
-                    </div>
-
-                    
-                    <div class="timeline-card" id="etapa-3" aria-hidden="true" aria-labelledby="etapa-titulo-3">
-                        <h3 class="stage-eyebrow">Etapa 3</h3>
-                        <h4 class="stage-title" id="etapa-titulo-3">Conteúdo</h4>
-                        <p class="stage-copy">Com a base organizada, montamos seu sistema inicial de conteúdo.</p>
-                        <p class="stage-copy stage-prompt">Você recebe:</p>
-                        <ul class="stage-list">
-                            <li class="stage-item"><span class="bullet"></span>4 territórios de conteúdo</li>
-                            <li class="stage-item"><span class="bullet"></span>20 ângulos que podem ser reutilizados</li>
-                            <li class="stage-item"><span class="bullet"></span>8 roteiros completos de Reels</li>
-                            <li class="stage-item"><span class="bullet"></span>2 carrosséis completos</li>
-                            <li class="stage-item"><span class="bullet"></span>10 pautas extras</li>
-                            <li class="stage-item"><span class="bullet"></span>Estrutura de Stories</li>
-                            <li class="stage-item"><span class="bullet"></span>Calendário de 30 dias</li>
-                        </ul>
-                        <div class="stage-result">
-                            <p class="stage-result-copy">Os conteúdos são divididos entre descoberta, profundidade, prova e conteúdo pessoal.</p>
-                            <p class="stage-result-copy">Assim o perfil consegue crescer sem virar uma sequência de dicas repetidas.</p>
+            <!-- PRIMEIRO GRUPO -->
+            <div class="marquee-group">
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
                         </div>
+                        <img src="perfil-antes.png" alt="Perfil antes do projeto" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
                     </div>
+                </figure>
 
-                    
-                    <div class="timeline-card" id="etapa-4" aria-hidden="true" aria-labelledby="etapa-titulo-4">
-                        <h3 class="stage-eyebrow">Etapa 4</h3>
-                        <h4 class="stage-title" id="etapa-titulo-4">Ativação</h4>
-                        <p class="stage-copy">Na última etapa, colocamos a estrutura para rodar.</p>
-                        <p class="stage-copy stage-prompt">Eu reviso os primeiros conteúdos, faço os ajustes finais no perfil, registramos as métricas iniciais e deixo um plano claro para você continuar depois dos 30 dias.</p>
-                        <p class="stage-result">No final, você fica com tudo organizado dentro do seu portal no Notion.</p>
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="perfil-atual.png" alt="Perfil depois do projeto" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
                     </div>
-                </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="viral-01.png" alt="Resultado de conteúdo viral 1" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="viral-02.png" alt="Resultado de conteúdo viral 2" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="viral-03.png" alt="Resultado de conteúdo viral 3" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="viral-04.png" alt="Resultado de conteúdo viral 4" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
             </div>
-        </div>
-    </section>
 
-    
-    <section class="deliverables section">
-        <div class="wrap deliverables-layout">
-            <div class="section-heading reveal">
-                <h2 class="section-title">O que você recebe</h2>
+            <!-- REPETIÇÃO PARA MANTER O MOVIMENTO CONTÍNUO -->
+            <div class="marquee-group" aria-hidden="true" inert>
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="perfil-antes.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="perfil-atual.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="viral-01.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="viral-02.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="viral-03.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
+
+                <figure class="proof-card">
+                    <div class="proof-image">
+                        <div class="image-placeholder" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                <circle cx="8" cy="8" r="1.5"></circle>
+                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
+                            </svg>
+                        </div>
+                        <img src="viral-04.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
+                    </div>
+                </figure>
             </div>
-            <div class="deliverables-copy reveal">
-                <ul class="deliverables-group">
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Direção estratégica do perfil</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Reestruturação da bio e CTA</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Estrutura dos destaques</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Definição dos conteúdos fixados</span></li>
-                </ul>
-                <ul class="deliverables-group">
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Sistema editorial</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>8 roteiros de Reels</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>2 carrosséis completos</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>10 pautas extras</span></li>
-                </ul>
-                <ul class="deliverables-group">
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Calendário de 30 dias</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Estrutura de Stories</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Revisão inicial dos conteúdos produzidos</span></li>
-                    <li><svg class="delivery-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span>Plano de continuidade</span></li>
-                </ul>
+
+        </div>
+    </div>
+
+    <div class="wrap">
+        <p class="proof-note reveal">Os resultados de cada perfil dependem de vários fatores e esses números não são uma promessa de crescimento igual para todos os clientes, eles estão aqui para mostrar trabalhos reais que já produzi e o tipo de projeto que consigo construir.</p>
+    </div>
+</section>
+
+<!-- SEÇÃO 3 -->
+<section class="section problem reading-section" id="secao-3">
+    <div class="wrap split">
+        <div class="reveal">
+            <h2>Seu Instagram acaba ficando para depois porque fazer tudo sozinho dá trabalho.</h2>
+        </div>
+
+        <div class="prose reveal">
+            <p>Você precisa pensar no que postar, escrever, gravar, editar, organizar o perfil, atualizar os destaques, acompanhar o que funcionou e ainda fazer tudo isso enquanto trabalha, atende clientes e toca o restante do negócio.</p>
+
+            <p>Durante os próximos 90 dias eu assumo essa parte junto com você para que o Instagram deixe de depender do tempo que sobra e comece a ter uma direção e uma produção contínua.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO 4 -->
+<section class="section foundation reading-section" id="secao-4">
+    <div class="wrap split">
+        <div class="reveal">
+            <h2>Nos primeiros 30 dias eu organizo toda a base do perfil.</h2>
+        </div>
+
+        <div class="prose reveal">
+            <p>
+                <span class="reading-chunk"><strong>Eu começo entendendo o que você vende</strong>, quem queremos atrair, quais serviços precisam aparecer mais, quais provas já existem e quais assuntos fazem sentido para o seu público,</span>
+                <span class="reading-chunk"> <strong>depois organizo bio, CTA, destaques</strong>, conteúdos fixados, apresentação dos serviços e a direção que vai orientar os próximos conteúdos.</span>
+            </p>
+
+            <p><strong>A produção já começa nesse primeiro mês</strong>, então você não passa 30 dias recebendo documento e esperando a estratégia terminar para começar a publicar.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO 5 -->
+<section class="section production" id="producao">
+    <div class="wrap">
+        <div class="wide-title reveal">
+            <h2>Nos outros 60 dias a gente continua produzindo e começa a usar os números para melhorar o conteúdo.</h2>
+        </div>
+
+        <div class="month-columns">
+            <p class="reveal"><strong>No segundo mês</strong> eu continuo criando pautas, roteiros, carrosséis e vídeos e começo a observar quais assuntos alcançam mais pessoas, quais formatos levam mais gente até o perfil e quais conteúdos geram mais interesse pelo seu trabalho.</p>
+
+            <p class="reveal"><strong>No terceiro mês</strong> a produção continua, mas agora já conseguimos repetir os assuntos que mostraram potencial, testar novos ângulos, diminuir o que não funcionou e tomar decisões usando o que aconteceu no seu próprio perfil.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO 6 -->
+<section class="section responsibilities reading-section" id="secao-6">
+    <div class="wrap split">
+        <div class="reveal">
+            <h2>Você continua aparecendo nos conteúdos e eu cuido da estrutura por trás.</h2>
+        </div>
+
+        <div class="prose reveal">
+            <p>
+                <span class="reading-chunk"><strong>Eu fico responsável pela direção</strong>, planejamento, ideias, roteiros, criação dos carrosséis, edição dos vídeos previstos no projeto, organização do calendário e análise do que está funcionando,</span>
+                <span class="reading-chunk"> <strong>enquanto você entra principalmente</strong> com o conhecimento sobre o seu trabalho, materiais que eu precisar e a gravação dos vídeos quando sua presença for necessária.</span>
+            </p>
+
+            <p><strong>Nos projetos remotos</strong> eu envio toda a direção de gravação e você me manda o material bruto, e quando houver necessidade de captação presencial nós organizamos isso separadamente conforme a cidade e o projeto.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO 7 -->
+<section class="section included reading-section" id="entregas">
+    <div class="wrap split">
+        <div class="reveal">
+            <h2>O que está incluído nos 90 dias.</h2>
+        </div>
+
+        <div class="prose reveal">
+            <p>
+                <span class="reading-chunk">O projeto inclui organização completa do perfil no primeiro mês, posicionamento e direção da comunicação, bio, CTA, destaques, conteúdos fixados,</span>
+                <span class="reading-chunk"> planejamento mensal, <strong>8 conteúdos principais por mês</strong> entre Reels e carrosséis, roteiros, criação das peças, edição dos vídeos previstos, orientação para Stories, acompanhamento das principais métricas e reuniões de planejamento e análise.</span>
+            </p>
+
+            <p>Ao longo do trimestre são <strong>24 conteúdos principais</strong> produzidos dentro de uma estratégia que vai sendo ajustada conforme o perfil começa a responder.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO 8 -->
+<section class="section audience reading-section" id="secao-8">
+    <div class="wrap split">
+        <div class="reveal">
+            <h2>Esse projeto faz mais sentido para quem já tem um bom serviço e sabe que poderia mostrar muito melhor o próprio trabalho na internet.</h2>
+        </div>
+
+        <div class="prose reveal">
+            <p>Eu trabalho principalmente com profissionais liberais, clínicas, arquitetos, consultores, especialistas e empresas de serviços que precisam de uma presença digital mais bem cuidada e de uma produção que não dependa de começar do zero toda semana.</p>
+
+            <p><strong>Você precisa ter disponibilidade para gravar</strong> quando o conteúdo pedir sua presença, me passar as informações necessárias e aprovar os materiais dentro dos prazos combinados.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO 9 -->
+<section class="section investment" id="investimento">
+    <div class="wrap">
+        <div class="wide-title reveal">
+            <h2>Você pode contratar o projeto completo de 90 dias ou apenas a organização inicial.</h2>
+        </div>
+
+        <div class="investment-options reveal">
+            <p>O projeto completo custa <strong>R$7.500 ou 3x de R$2.500</strong> e inclui a organização do primeiro mês mais dois meses de estratégia, produção, análise e ajustes.</p>
+
+            <p>Se você quiser apenas a etapa inicial de 30 dias, o investimento é de <strong>R$3.500</strong> e inclui posicionamento, organização do perfil e estrutura inicial de conteúdo sem os dois meses seguintes de produção.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SEÇÃO 10 -->
+<section class="section about" id="secao-10">
+    <div class="wrap about-layout">
+        <figure class="portrait about-portrait reveal">
+            <div class="portrait-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <circle cx="40" cy="28" r="12"></circle>
+                    <path d="M17 66c0-15 10-23 23-23s23 8 23 23"></path>
+                    <rect x="6" y="6" width="68" height="68" rx="6"></rect>
+                </svg>
             </div>
-        </div>
-    </section>
 
-    
-    <section class="process section">
-        <div class="wrap">
-            <div class="process-layout reveal">
-                <div class="process-intro"><h2 class="section-title">Como funciona</h2>
-                <p class="body-copy">O projeto começa com uma reunião de alinhamento e um briefing.</p>
-                <p class="body-copy">Depois seguimos a sequência:</p>
+            <img
+                src="fotoSobre.jpg"
+                alt="Ian Henrique"
+                decoding="async"
+                loading="lazy"
+                onload="this.parentElement.classList.add('loaded')"
+                onerror="this.hidden=true"
+            >
+        </figure>
 
-                </div><div class="process-detail"><div class="process-sequence">
-                    <span class="sequence-step">Direção</span>
-                    <span class="sequence-arrow">→</span>
-                    <span class="sequence-step">Perfil</span>
-                    <span class="sequence-arrow">→</span>
-                    <span class="sequence-step">Conteúdo</span>
-                    <span class="sequence-arrow">→</span>
-                    <span class="sequence-step">Ativação</span>
-                </div>
-
-                <div class="process-note">
-                    <p class="process-note-title">Cada etapa possui uma rodada consolidada de ajustes.</p>
-                    <p class="body-copy">O projeto inteiro dura 30 dias, desde que as aprovações e materiais solicitados sejam enviados dentro dos prazos combinados.</p>
-                </div>
-            </div></div>
-        </div>
-    </section>
-
-    
-    <section class="audience section">
-        <div class="wrap">
+        <div class="about-content">
             <div class="reveal">
-                <div class="audience-panel">
-                    <h3 class="section-title">Para quem faz sentido</h3>
-                    <p class="body-copy">O P30D tende a funcionar melhor para profissionais que:</p>
-                    <ul class="audience-list">
-                        <li class="audience-item"><div class="check-mark"></div><span>Já possuem um serviço real para vender</span></li>
-                        <li class="audience-item"><div class="check-mark"></div><span>Sabem que poderiam trabalhar melhor o Instagram</span></li>
-                        <li class="audience-item"><div class="check-mark"></div><span>Estão cansados de improvisar conteúdo</span></li>
-                        <li class="audience-item"><div class="check-mark"></div><span>Querem deixar o perfil mais organizado</span></li>
-                        <li class="audience-item"><div class="check-mark"></div><span>Conseguem gravar e publicar o material planejado</span></li>
-                    </ul>
-                </div>
+                <h2>Quem vai cuidar do seu projeto.</h2>
+            </div>
+
+            <div class="prose reveal">
+                <p>Trabalho com marketing digital desde 2022, comecei dentro de uma produtora participando de projetos e lançamentos digitais, depois passei um ano e cinco meses no marketing da West Imob e nos últimos anos fui direcionando meu trabalho para posicionamento, conteúdo e crescimento de profissionais e empresas.</p>
+
+                <p>Hoje trabalho com poucos projetos ao mesmo tempo porque quero participar de perto da estratégia, da produção e das decisões que vão sendo tomadas durante o período.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    
-    <section class="investment section">
-        <div class="wrap">
-            <div class="investment-shell">
-                <div class="reveal">
-                    <div class="investment-panel">
-                        <h2 class="section-title">Investimento</h2>
+<!-- SEÇÃO 11 -->
+<section class="section final" id="conversa">
+    <div class="wrap final-copy reveal">
+        <h2>Quer saber o que eu mudaria primeiro no seu perfil.</h2>
 
-                        <div class="price">
-                            <span class="price-currency">R$</span>
-                            <span class="price-amount">2.500</span>
-                        </div>
-                        <p class="price-term">À vista</p>
+        <p>Clique no botão abaixo, me envie algumas informações sobre seu trabalho e o seu Instagram e eu vou analisar o perfil antes da nossa conversa.</p>
 
-                        <div class="installment">
-                            <p>ou em até 12x com juros</p>
-                        </div>
+        <p>Na reunião eu te mostro as primeiras coisas que trabalharia, explico como eu conduziria os próximos 90 dias e a gente entende se o projeto faz sentido para o seu momento.</p>
 
-                        <p class="investment-copy">O produto precisa parecer bom porque faz sentido, não porque criamos uma soma artificial de entregáveis.</p>
+        <a
+            class="button"
+            href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram."
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Quero conversar sobre meu perfil.
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14m-6-6 6 6-6 6"></path>
+            </svg>
+        </a>
+    </div>
+</section>
 
-                        <button onclick="irParaConversa()" class="button button-primary" type="button">
-                            Quero profissionalizar o meu perfil
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="footer">
+    <div class="wrap">
+        © <span id="year"></span> Ian Henrique.
+    </div>
+</footer>
 
-    
-    <section class="final-cta section">
-        <div class="wrap">
-            <div class="final-content reveal">
-                <h2 class="section-title">
-                    Se você quer organizar seu Instagram durante os próximos 30 dias, <span class="muted">toque no botão abaixo.</span>
-                </h2>
-                <button onclick="irParaConversa()" class="button button-primary" type="button">
-                    Quero profissionalizar o meu perfil
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </button>
-            </div>
-        </div>
-    </section>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
 
-    <footer class="footer">
-        <div class="wrap">
-            <p>© <span id="year"></span> Ian Henrique.</p>
-        </div>
-    </footer>
-
-    <script>// Mantidos o número e a mensagem do arquivo original.
-const WHATSAPP_NUMERO = "5577999645052";
-const MENSAGEM_WHATSAPP = "Olá, Ian! Vim pela página do P30D e quero profissionalizar o meu perfil.";
-function irParaConversa() {
-  window.open(`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(MENSAGEM_WHATSAPP)}`, '_blank', 'noopener,noreferrer');
-}
-document.getElementById('year').textContent = new Date().getFullYear();
 (() => {
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const desktop = window.matchMedia('(min-width: 1000px) and (min-height: 740px)');
-  const cards = Array.from(document.querySelectorAll('.timeline-card'));
-  const steps = Array.from(document.querySelectorAll('.step-button'));
-  const number = document.getElementById('timeline-number');
-  const navbar = document.getElementById('navbar');
-  const hero = document.querySelector('.hero');
-  const heroCopy = document.querySelector('.hero-copy');
-  let active = -1;
-  let frame = false;
-  if (!reduceMotion.matches && 'IntersectionObserver' in window) {
-    document.body.classList.add('motion-ready');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: .07 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  }
-  function selectStep(index) {
-    if (active === index) return;
-    active = index;
-    number.textContent = `0${index + 1}`;
-    steps.forEach((step, i) => {
-      step.classList.toggle('is-active', i === index);
-      step.setAttribute('aria-pressed', String(i === index));
-      if (i === index) step.setAttribute('aria-current', 'step');
-      else step.removeAttribute('aria-current');
-    });
-    cards.forEach((card, i) => {
-      card.classList.toggle('is-active', i === index);
-      if (i !== index) card.setAttribute('aria-hidden', 'true');
-      else card.removeAttribute('aria-hidden');
-    });
-  }
-  function paint() {
-    frame = false;
-    const y = window.scrollY;
-    navbar.classList.toggle('is-scrolled', y > 24);
-    if (!reduceMotion.matches && desktop.matches && y < hero.offsetHeight + 100) {
-      heroCopy.style.transform = `translateY(${y * .085}px)`;
-      heroCopy.style.opacity = String(Math.max(.45, 1 - y / 1300));
-      hero.style.setProperty('--hero-shift', `${y}px`);
+    const navbar = document.getElementById("navbar");
+    let frame = false;
+
+    function updateNav() {
+        frame = false;
+        navbar.classList.toggle("is-scrolled", window.scrollY > 24);
     }
-  }
-  function schedule() { if (!frame) { frame = true; requestAnimationFrame(paint); } }
-  function configure() {
-    heroCopy.style.removeProperty('transform');
-    heroCopy.style.removeProperty('opacity');
-    if (active < 0) selectStep(0);
-    paint();
-  }
-  steps.forEach((button, index) => button.addEventListener('click', () => {
-    selectStep(index);
-  }));
-  window.addEventListener('scroll', schedule, { passive: true });
-  window.addEventListener('resize', configure, { passive: true });
-  reduceMotion.addEventListener('change', configure);
-  configure();
+
+    window.addEventListener("scroll", () => {
+        if (!frame) {
+            frame = true;
+            requestAnimationFrame(updateNav);
+        }
+    }, { passive: true });
+
+    updateNav();
+
+    const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+    if (!reduceMotion.matches && "IntersectionObserver" in window) {
+        document.body.classList.add("motion-ready");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: .07
+        });
+
+        document.querySelectorAll(".reveal").forEach(element => {
+            observer.observe(element);
+        });
+    }
+
+    /*
+     * Velocidade do carrossel em pixels por segundo.
+     * Um número maior deixa o movimento mais rápido.
+     * Não existe pausa ao passar o mouse.
+     */
+    const PIXELS_PER_SECOND = 30;
+
+    const track = document.querySelector(".marquee-track");
+    const group = document.querySelector(".marquee-group");
+
+    function updateCarouselSpeed() {
+        const distance = group.getBoundingClientRect().width;
+
+        if (distance > 0) {
+            track.style.setProperty(
+                "--marquee-duration",
+                `${distance / PIXELS_PER_SECOND}s`
+            );
+        }
+    }
+
+    updateCarouselSpeed();
+
+    if ("ResizeObserver" in window) {
+        const resizeObserver = new ResizeObserver(updateCarouselSpeed);
+        resizeObserver.observe(group);
+    } else {
+        window.addEventListener(
+            "resize",
+            updateCarouselSpeed,
+            { passive: true }
+        );
+    }
 })();
-</script></body>
+</script>
+
+</body>
 </html>
