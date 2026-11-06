@@ -1,15 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Ian Henrique</title>
-<meta name="theme-color" content="#f6f5f2">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;450;500;550;600;650;700&amp;display=swap" rel="stylesheet">
-
+<meta content="#f6f5f2" name="theme-color"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;450;500;550;600;650;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
     --paper: #f6f5f2;
@@ -915,435 +914,493 @@ p strong {
         transition: none;
     }
 }
+
+/* Ajustes da oferta de 90 dias — preserva a identidade original */
+.investment-options {grid-template-columns: minmax(0, 1fr); max-width: 850px;}
+.investment-options p {margin:0;}
+.included .prose p:last-child {font: 400 16px/1.68 Inter, Arial, sans-serif; color: var(--muted);}
+.deliverables {padding-left: 21px; margin: 17px 0 25px; font: 400 16px/1.7 Inter,Arial,sans-serif;}
+.deliverables li {padding-left: 3px; margin-bottom: 8px;}
+.scope-heading {font: 600 16px/1.6 Inter,Arial,sans-serif; color:var(--ink); margin: 27px 0 13px;}
+.proof-intro p {max-width: 640px;}
+@media(max-width:760px){.deliverables {font-size:15.5px;line-height:1.65;} .included .prose p:last-child {font-size:15.5px;line-height:1.65;}}
+
+
+/* SISTEMA DE ENTREGAS — DIREÇÃO EDITORIAL V3 */
+.included-orbit{
+  background:radial-gradient(ellipse at 18% 36%,#eeede5 0%,transparent 54%),linear-gradient(150deg,#eae9e2 0%,#e5e5dd 100%);
+  padding:106px 0 104px;overflow:hidden;isolation:isolate
+}
+.included-orbit .wrap{width:min(1240px,calc(100% - 80px))}
+.orbit-heading{max-width:860px;text-align:center;margin:0 auto 38px}
+.orbit-eyebrow{font:650 10px/1.5 Inter,Arial,sans-serif;letter-spacing:2.4px;color:#6c7866}
+.orbit-heading h2{max-width:780px;margin:12px auto 13px;font-size:clamp(35px,4.1vw,57px);line-height:1.11;letter-spacing:-1.1px}
+.orbit-heading p{max-width:540px;margin:0 auto;font:400 15px/1.65 Inter,Arial,sans-serif;color:#62635e}
+.orbit-layout{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(320px,.84fr);gap:22px;align-items:center;max-width:1240px;margin:auto}
+.orbit-universe{height:610px;position:relative;min-width:0;isolation:isolate;background:radial-gradient(circle at 50% 50%,#cfd4c544 0%,#e9e9df20 45%,transparent 71%)}
+.orbit-ambient{position:absolute;pointer-events:none;border-radius:50%;filter:blur(39px);opacity:.32;animation:nebula-drift 13s ease-in-out infinite alternate}
+.orbit-ambient-one{width:245px;height:245px;top:7%;left:10%;background:#bac5b0}
+.orbit-ambient-two{width:220px;height:220px;bottom:10%;right:6%;background:#cccabc;animation-delay:-6s}
+@keyframes nebula-drift{to{transform:translate(21px,-14px) scale(1.2);opacity:.58}}
+.orbit-ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:508px;height:508px;border-radius:50%;border:1px solid rgba(76,88,66,.16);pointer-events:none}
+.ring-inner{display:none}
+.orbit-axis{display:none}
+.orbit-ring:after{content:"";position:absolute;inset:28px;border-radius:50%;background:radial-gradient(ellipse at 34% 28%,#fff9 0%,transparent 43%);opacity:.27}
+.orbit-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:183px;width:183px;border-radius:50%;padding:7px;background:conic-gradient(from 130deg,#d5d7c9,#87927e,#ebede0,#b5baa8,#d5d7c9);box-shadow:0 0 0 11px #f2f2ebc4,0 27px 77px #1d211d29;z-index:3}
+.orbit-center:before{content:"";position:absolute;inset:-20px;border-radius:50%;border:1px solid #68756166;border-top-color:#343e35;animation:core-spin 25s linear infinite}
+.orbit-center:after{content:"";position:absolute;inset:-30px;border-radius:50%;border:1px solid #93a18c3f}
+@keyframes core-spin{to{transform:rotate(360deg)}}
+.orbit-core{height:100%;width:100%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#f9f9f0;background:radial-gradient(circle at 33% 18%,#5f6d5b 0%,#30392f 40%,#171d19 100%);box-shadow:inset -14px -15px 37px #03060366,inset 9px 11px 20px #ffffff12;animation:core-breathe 8s ease-in-out infinite alternate}
+@keyframes core-breathe{to{box-shadow:inset -14px -15px 37px #03060366,inset 9px 11px 20px #ffffff19,0 0 30px #899a8422}}
+.orbit-core span{font:650 9px/1.5 Inter,Arial,sans-serif;letter-spacing:2.4px;color:#d3dccd}
+.orbit-core strong{font:400 25px/1.11 "DM Serif Display",Georgia,serif;letter-spacing:1px;color:#fcfcef;text-align:center;max-width:150px;text-wrap:balance}
+.orbit-core small{font:650 9px/1.5 Inter,Arial,sans-serif;letter-spacing:1.7px;color:#ced6c8}
+.orbit-track{position:absolute;left:50%;top:50%;width:508px;height:508px;transform:translate(-50%,-50%);animation:orbit-revolution 38s linear infinite;z-index:5}
+@keyframes orbit-revolution{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.orbit-node{position:absolute;left:var(--x);top:var(--y);width:113px;height:113px;transform:translate(-50%,-50%);border-radius:50%;border:1px solid #cacfc2;background:radial-gradient(circle at 26% 18%,#fff,#f4f4ee 58%,#e2e5d9);color:#31392e;box-shadow:inset 0 2px 2px #fff,0 12px 27px #2830241a,0 0 0 6px #fff7;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;padding:11px 8px;text-align:center;cursor:pointer;z-index:2;font-family:Inter,Arial,sans-serif;animation:orbit-counter 38s linear infinite;transition:background .3s,border-color .3s,box-shadow .3s,color .3s;will-change:transform}
+@keyframes orbit-counter{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
+.orbit-node .node-icon{font-size:19px;line-height:1.1;color:#687763;transition:transform .35s,color .3s}
+.orbit-node strong{font-weight:650;font-size:11px;line-height:1.25}
+.orbit-node small{font-size:9px;line-height:1.1;color:#7b8277}
+.orbit-node:is(:hover,:focus-visible,.is-active){background:radial-gradient(circle at 26% 19%,#667963,#283429 77%);color:#fff;border-color:#52634f;box-shadow:0 17px 40px #15241533,0 0 0 6px #8ba2894d,0 0 0 14px #96a68c18}
+.orbit-node:is(:hover,:focus-visible,.is-active) .node-icon,.orbit-node:is(:hover,:focus-visible,.is-active) small{color:#e3eedc}
+.orbit-node:is(:hover,:focus-visible) .node-icon{transform:scale(1.18)}
+.orbit-node:focus-visible{outline:3px solid #304c2f;outline-offset:13px}
+/* Pequeno satélite luminoso: comunica movimento sem multiplicar linhas */
+.orbit-satellite{position:absolute;left:50%;top:50%;height:508px;width:508px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;animation:satellite-turn 13s linear infinite;z-index:2}
+.orbit-satellite:before{content:"";position:absolute;width:9px;height:9px;top:-4px;left:calc(50% - 4px);border-radius:50%;background:#687c64;box-shadow:0 0 0 6px #7a907625,0 0 27px #5c755686}
+@keyframes satellite-turn{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.orbit-hint{display:none!important}
+.orbit-details{position:relative;overflow:hidden;isolation:isolate;min-height:476px;padding:32px 33px 27px;display:flex;flex-direction:column;background:radial-gradient(circle at 85% 8%,#455342,#273229 35%,#1b231e 85%);color:#f3f2e9;border:none;border-radius:13px;box-shadow:0 30px 72px #1a231924}
+.orbit-details:before{content:"";position:absolute;inset:-38% -65% auto auto;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#aab8a41c 0%,transparent 66%);pointer-events:none;animation:nebula-drift 10s ease-in-out infinite alternate}
+.orbit-details:after{content:"";position:absolute;inset:auto -85px -180px auto;width:270px;height:270px;border-radius:50%;background:radial-gradient(circle,#a3b99a19,transparent 65%);pointer-events:none}
+.orbit-details>*{position:relative;z-index:1}
+.orbit-details-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font:650 10px/1.4 Inter,Arial,sans-serif;letter-spacing:1.3px;color:#c2d0bc}
+.orbit-step{padding:8px 11px;border-radius:99px;background:#ffffff16;color:#eef5e9;white-space:nowrap}
+.orbit-detail-label{color:#b3c2af;text-transform:uppercase;text-align:right}
+#orbit-detail-content{padding:20px 0 18px;flex:1}
+#orbit-detail-content.detail-enter{animation:detail-shift .48s cubic-bezier(.2,.7,.2,1) both}
+@keyframes detail-shift{from{opacity:0;transform:translateY(14px);filter:blur(3px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+.orbit-detail-kicker{display:block;color:#bfceb9;font:650 10px/1.45 Inter,Arial,sans-serif;letter-spacing:2px;margin-bottom:14px}
+#orbit-detail-content h3{font:400 clamp(30px,3vw,39px)/1.12 "DM Serif Display",Georgia,serif;color:#fbfbf2;letter-spacing:-.45px;margin:0 0 16px}
+#orbit-detail-content .orbit-detail-lead{font:400 14px/1.76 Inter,Arial,sans-serif;color:#e0e8dc;margin:0 0 20px}
+.orbit-deliveries{display:grid;gap:10px;margin-top:15px}
+.orbit-delivery{display:flex;align-items:flex-start;gap:13px;font:450 12.5px/1.5 Inter,Arial,sans-serif;color:#d7e0d3}
+.orbit-delivery-mark{display:grid;place-items:center;flex:0 0 22px;width:22px;height:22px;border-radius:7px;background:#cad8c01c;color:#d6e9ca;font-size:10px;font-weight:700;line-height:1}
+.orbit-details-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:auto}
+.orbit-details-bottom .orbit-subnote{font:450 11px/1.5 Inter,Arial,sans-serif;color:#a8b8a2}
+.orbit-next{appearance:none;border:1px solid #a9c4a14d;background:#b9d0b4;color:#1b2a1d;padding:11px 13px;border-radius:99px;font:650 11px/1.3 Inter,Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:12px;transition:transform .25s,background .25s,box-shadow .25s;white-space:nowrap}
+.orbit-next:hover{background:#d3e3ce;transform:translateY(-2px);box-shadow:0 8px 20px #0002}
+.orbit-next:focus-visible{outline:2px solid #eaf8e6;outline-offset:3px}
+.orbit-next .arrow{font-size:15px}
+/* Números editoriais: sem divisórias verticais ou horizontais */
+.orbit-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;max-width:1120px;margin:37px auto 0;border:none}
+.orbit-summary>div{border:0!important;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:18px 10px;text-align:center}
+.orbit-summary strong{font:400 35px/1.12 "DM Serif Display",Georgia,serif;letter-spacing:-.5px;color:#273027}
+.orbit-summary span{font:400 12px/1.6 Inter,Arial,sans-serif;color:#73776c}
+/* Escopo expandível sem bordas e sem linha inferior */
+.orbit-exclusions{max-width:910px;margin:15px auto 0;border:0!important}
+.orbit-exclusions-toggle{display:flex;justify-content:space-between;align-items:center;width:100%;padding:19px 24px;border:none;border-radius:10px;background:#d8dbd0;color:#30392f;text-align:left;font:600 13px/1.5 Inter,Arial,sans-serif;cursor:pointer;transition:background .22s}
+.orbit-exclusions-toggle:hover{background:#cdd4c6}
+.orbit-exclusions-toggle:focus-visible{outline:3px solid #6d8569;outline-offset:4px}
+.exclusion-plus{display:grid;place-items:center;font-size:21px;font-weight:400;width:23px;height:23px;transition:transform .25s}
+.orbit-exclusions-toggle[aria-expanded="true"] .exclusion-plus{transform:rotate(45deg)}
+.orbit-exclusions-body{padding:18px 23px 12px;max-width:910px}
+.orbit-exclusions-body[hidden]{display:none}
+.orbit-exclusions-body p{font:400 13px/1.75 Inter,Arial,sans-serif;color:#50564c;margin:0 0 9px}
+/* Mantém a correção previamente aprovada para investimento */
+.investment{padding:108px 0 120px}
+.investment .wide-title{margin:0 auto 45px;max-width:950px;text-align:center}
+.investment .wide-title h2{max-width:950px;text-align:center;margin-inline:auto}
+.investment-options{grid-template-columns:minmax(0,1fr);max-width:940px;margin:0 auto}
+.investment-options p{max-width:none;text-align:center;padding:55px 65px;line-height:1.85;margin:0;border-radius:7px}
+@media(max-width:1220px){.orbit-layout{gap:8px;grid-template-columns:minmax(0,1fr) minmax(310px,.85fr)}.orbit-universe{transform:scale(.87);transform-origin:center;margin:-36px -30px}}
+@media(max-width:950px){.orbit-layout{grid-template-columns:1fr;max-width:720px;gap:10px}.orbit-universe{width:100%;max-width:650px;margin:0 auto;transform:none;height:605px}.orbit-details{width:min(100%,600px);min-height:410px;margin:auto}.included-orbit .wrap{width:min(100% - 48px,780px)}.orbit-heading{margin-bottom:12px}}
+@media(max-width:760px){
+  .included-orbit{padding:72px 0 75px}.included-orbit .wrap{width:calc(100% - 36px)}
+  .orbit-heading h2{font-size:clamp(34px,9vw,42px)}.orbit-heading p{font-size:14px}
+  .orbit-universe{height:auto;width:100%;max-width:none;margin:0;padding:0;background:none;transform:none;display:block}
+  .orbit-ring,.orbit-center,.orbit-ambient,.orbit-satellite{display:none}
+  .orbit-track{position:static;width:100%;height:auto;transform:none;animation:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .orbit-node{position:static;left:auto;top:auto;transform:none!important;animation:mobile-bob 6s ease-in-out infinite!important;animation-delay:var(--delay)!important;width:100%;height:103px;border-radius:13px;gap:6px;box-shadow:0 8px 18px #273a2615}
+  .orbit-node strong{font-size:12px}.orbit-node small{font-size:10px}.orbit-node .node-icon{font-size:19px}
+  .orbit-node:last-child{grid-column:1 / -1;max-width:100%;height:88px}
+  .orbit-details{margin-top:17px;min-height:445px;padding:27px 23px 25px;border-radius:12px}
+  #orbit-detail-content h3{font-size:33px}.orbit-details-bottom{align-items:center}.orbit-details-bottom .orbit-subnote{font-size:10px}
+  .orbit-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;margin-top:22px}
+  .orbit-summary>div{padding:13px 7px}.orbit-summary>div:last-child{grid-column:1/-1}.orbit-summary strong{font-size:28px}.orbit-summary span{font-size:11px}
+  .orbit-exclusions{margin-top:18px}.orbit-exclusions-toggle{padding:17px 16px}
+  .investment{padding:80px 0 90px}.investment .wide-title{margin-bottom:28px}.investment-options p{padding:32px 25px;text-align:center;font-size:15px}
+}
+@keyframes mobile-bob{0%,100%{translate:0 0}50%{translate:0 -3px}}
+@media(prefers-reduced-motion:reduce){.orbit-track,.orbit-node,.orbit-center:before,.orbit-core,.orbit-satellite,.orbit-ambient,.orbit-details:before,.orbit-details:after{animation:none!important}.orbit-node{translate:none!important}#orbit-detail-content.detail-enter{animation:none}}
+
 </style>
 </head>
-
 <body>
-
 <!-- NAVEGAÇÃO -->
-<nav class="nav" id="navbar" aria-label="Navegação principal">
-    <div class="wrap nav-inner">
-        <a class="brand" href="#inicio">
-            <i aria-hidden="true"></i>
+<nav aria-label="Navegação principal" class="nav" id="navbar">
+<div class="wrap nav-inner">
+<a class="brand" href="#inicio">
+<i aria-hidden="true"></i>
             Ian Henrique
         </a>
-
-        <a
-            class="button"
-            href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram."
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+<a class="button" href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram." rel="noopener noreferrer" target="_blank">
             Quero conversar sobre meu projeto.
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14m-6-6 6 6-6 6"></path>
-            </svg>
-        </a>
-    </div>
+            <svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="17">
+<path d="M5 12h14m-6-6 6 6-6 6"></path>
+</svg>
+</a>
+</div>
 </nav>
-
 <!-- SEÇÃO 1 -->
 <section class="hero" id="inicio">
-    <div class="wrap hero-grid">
-        <div class="hero-copy">
-            <h1>Eu organizo o seu Instagram e cuido da produção dos seus conteúdos durante 90 dias.</h1>
-
-            <p>No primeiro mês eu organizo posicionamento, perfil, mensagem e direção de conteúdo, e nos dois meses seguintes continuo produzindo, testando formatos e ajustando o que estiver trazendo mais alcance, visitas ao perfil e oportunidades para o seu negócio.</p>
-
-            <a
-                class="button"
-                href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram."
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>Eu organizo o seu Instagram e cuido da produção dos seus conteúdos durante 90 dias.</h1>
+<p>No primeiro mês eu organizo posicionamento, perfil, mensagem e direção de conteúdo, e nos dois meses seguintes continuo produzindo, testando formatos e ajustando o que estiver trazendo mais alcance, visitas ao perfil e oportunidades para o seu negócio.</p>
+<a class="button" href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram." rel="noopener noreferrer" target="_blank">
                 Quero conversar sobre meu projeto.
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M5 12h14m-6-6 6 6-6 6"></path>
-                </svg>
-            </a>
-        </div>
-
-        <figure class="portrait hero-portrait">
-            <div class="portrait-placeholder" aria-hidden="true">
-                <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.2">
-                    <circle cx="40" cy="28" r="12"></circle>
-                    <path d="M17 66c0-15 10-23 23-23s23 8 23 23"></path>
-                    <rect x="6" y="6" width="68" height="68" rx="6"></rect>
-                </svg>
-            </div>
-
-            <img
-                src="fotoCapa.jpg"
-                alt="Ian Henrique"
-                decoding="async"
-                fetchpriority="high"
-                onload="this.parentElement.classList.add('loaded')"
-                onerror="this.hidden=true"
-            >
-        </figure>
-    </div>
+                <svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="17">
+<path d="M5 12h14m-6-6 6 6-6 6"></path>
+</svg>
+</a>
+</div>
+<figure class="portrait hero-portrait">
+<div aria-hidden="true" class="portrait-placeholder">
+<svg fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 80 80">
+<circle cx="40" cy="28" r="12"></circle>
+<path d="M17 66c0-15 10-23 23-23s23 8 23 23"></path>
+<rect height="68" rx="6" width="68" x="6" y="6"></rect>
+</svg>
+</div>
+<img alt="Ian Henrique" decoding="async" fetchpriority="high" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="fotoCapa.jpg"/>
+</figure>
+</div>
 </section>
-
 <!-- SEÇÃO 2 -->
 <section class="proof section" id="trabalhos">
-    <div class="wrap proof-intro reveal">
-        <h2>Alguns trabalhos que já passaram pela minha mão.</h2>
-
-        <p>Um dos projetos que melhor representa meu trabalho é o da Dra. Fáthima Oliveira, que estava na faixa de 8 mil seguidores quando começamos e passou de 50 mil durante os meses em que trabalhamos posicionamento, conteúdo e produtos juntos.</p>
-    </div>
-
-    <div class="marquee" role="region" aria-label="Trabalhos e resultados">
-        <div class="marquee-track">
-
-            <!-- PRIMEIRO GRUPO -->
-            <div class="marquee-group">
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="perfil-antes.png" alt="Perfil antes do projeto" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="perfil-atual.png" alt="Perfil depois do projeto" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="viral-01.png" alt="Resultado de conteúdo viral 1" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="viral-02.png" alt="Resultado de conteúdo viral 2" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="viral-03.png" alt="Resultado de conteúdo viral 3" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="viral-04.png" alt="Resultado de conteúdo viral 4" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-            </div>
-
-            <!-- REPETIÇÃO PARA MANTER O MOVIMENTO CONTÍNUO -->
-            <div class="marquee-group" aria-hidden="true" inert>
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="perfil-antes.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="perfil-atual.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="viral-01.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="viral-02.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="viral-03.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-
-                <figure class="proof-card">
-                    <div class="proof-image">
-                        <div class="image-placeholder" aria-hidden="true">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="3"></rect>
-                                <circle cx="8" cy="8" r="1.5"></circle>
-                                <path d="m3 17 5-5 4 4 4-5 5 6"></path>
-                            </svg>
-                        </div>
-                        <img src="viral-04.png" alt="" decoding="async" onload="this.parentElement.classList.add('loaded')" onerror="this.hidden=true">
-                    </div>
-                </figure>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="wrap">
-        <p class="proof-note reveal">Os resultados de cada perfil dependem de vários fatores e esses números não são uma promessa de crescimento igual para todos os clientes, eles estão aqui para mostrar trabalhos reais que já produzi e o tipo de projeto que consigo construir.</p>
-    </div>
+<div class="wrap proof-intro reveal">
+<h2>Alguns resultados do meu trabalho.</h2>
+<p>A Dra. Fáthima Oliveira saiu de cerca de 8 mil para mais de 50 mil seguidores. Já a Tissi Ramos, em menos de 35 dias, passou de um perfil que não comunicava toda a sua experiência para uma presença digital mais organizada, com serviços claros e uma imagem profissional à altura do trabalho que entrega.</p>
+</div>
+<div aria-label="Trabalhos e resultados" class="marquee" role="region">
+<div class="marquee-track">
+<!-- PRIMEIRO GRUPO -->
+<div class="marquee-group">
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="Perfil antes do projeto" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="perfil-antes.png"/>
+</div>
+</figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="Perfil depois do projeto" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="perfil-atual.png"/>
+</div>
+</figure><figure class="proof-card"><div class="proof-image"><div aria-hidden="true" class="image-placeholder">Imagem de resultado</div><img alt="Perfil da Tissi Ramos antes da reorganização" decoding="async" loading="lazy" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="tissi-antes.png"/></div></figure><figure class="proof-card"><div class="proof-image"><div aria-hidden="true" class="image-placeholder">Imagem de resultado</div><img alt="Perfil da Tissi Ramos depois da reorganização" decoding="async" loading="lazy" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="tissi-depois.png"/></div></figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="Resultado de conteúdo viral 1" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="viral-01.png"/>
+</div>
+</figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="Resultado de conteúdo viral 2" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="viral-02.png"/>
+</div>
+</figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="Resultado de conteúdo viral 3" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="viral-03.png"/>
+</div>
+</figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="Resultado de conteúdo viral 4" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="viral-04.png"/>
+</div>
+</figure>
+</div>
+<!-- REPETIÇÃO PARA MANTER O MOVIMENTO CONTÍNUO -->
+<div aria-hidden="true" class="marquee-group" inert="">
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="perfil-antes.png"/>
+</div>
+</figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="perfil-atual.png"/>
+</div>
+</figure><figure class="proof-card"><div class="proof-image"><div aria-hidden="true" class="image-placeholder">Imagem de resultado</div><img alt="" decoding="async" loading="lazy" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="tissi-antes.png"/></div></figure><figure class="proof-card"><div class="proof-image"><div aria-hidden="true" class="image-placeholder">Imagem de resultado</div><img alt="" decoding="async" loading="lazy" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="tissi-depois.png"/></div></figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="viral-01.png"/>
+</div>
+</figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="viral-02.png"/>
+</div>
+</figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="viral-03.png"/>
+</div>
+</figure>
+<figure class="proof-card">
+<div class="proof-image">
+<div aria-hidden="true" class="image-placeholder">
+<svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewbox="0 0 24 24" width="40">
+<rect height="18" rx="3" width="18" x="3" y="3"></rect>
+<circle cx="8" cy="8" r="1.5"></circle>
+<path d="m3 17 5-5 4 4 4-5 5 6"></path>
+</svg>
+</div>
+<img alt="" decoding="async" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="viral-04.png"/>
+</div>
+</figure>
+</div>
+</div>
+</div>
+<div class="wrap">
+<p class="proof-note reveal">Os resultados variam conforme o perfil, o mercado e o trabalho desenvolvido.</p>
+</div>
 </section>
-
 <!-- SEÇÃO 3 -->
 <section class="section problem reading-section" id="secao-3">
-    <div class="wrap split">
-        <div class="reveal">
-            <h2>Seu Instagram acaba ficando para depois porque fazer tudo sozinho dá trabalho.</h2>
-        </div>
-
-        <div class="prose reveal">
-            <p>Você precisa pensar no que postar, escrever, gravar, editar, organizar o perfil, atualizar os destaques, acompanhar o que funcionou e ainda fazer tudo isso enquanto trabalha, atende clientes e toca o restante do negócio.</p>
-
-            <p>Durante os próximos 90 dias eu assumo essa parte junto com você para que o Instagram deixe de depender do tempo que sobra e comece a ter uma direção e uma produção contínua.</p>
-        </div>
-    </div>
+<div class="wrap split">
+<div class="reveal">
+<h2>Seu Instagram acaba ficando para depois porque fazer tudo sozinho dá trabalho.</h2>
+</div>
+<div class="prose reveal">
+<p>Você precisa pensar no que postar, escrever, gravar, editar, organizar o perfil, atualizar os destaques, acompanhar o que funcionou e ainda fazer tudo isso enquanto trabalha, atende clientes e toca o restante do negócio.</p>
+<p>Durante os próximos 90 dias eu assumo essa parte junto com você para que o Instagram deixe de depender do tempo que sobra e comece a ter uma direção e uma produção contínua.</p>
+</div>
+</div>
 </section>
-
 <!-- SEÇÃO 4 -->
 <section class="section foundation reading-section" id="secao-4">
-    <div class="wrap split">
-        <div class="reveal">
-            <h2>Nos primeiros 30 dias eu organizo toda a base do perfil.</h2>
-        </div>
-
-        <div class="prose reveal">
-            <p>
-                <span class="reading-chunk"><strong>Eu começo entendendo o que você vende</strong>, quem queremos atrair, quais serviços precisam aparecer mais, quais provas já existem e quais assuntos fazem sentido para o seu público,</span>
-                <span class="reading-chunk"> <strong>depois organizo bio, CTA, destaques</strong>, conteúdos fixados, apresentação dos serviços e a direção que vai orientar os próximos conteúdos.</span>
-            </p>
-
-            <p><strong>A produção já começa nesse primeiro mês</strong>, então você não passa 30 dias recebendo documento e esperando a estratégia terminar para começar a publicar.</p>
-        </div>
-    </div>
+<div class="wrap split">
+<div class="reveal">
+<h2>Nos primeiros 30 dias eu organizo toda a base do perfil.</h2>
+</div>
+<div class="prose reveal">
+<p>
+<span class="reading-chunk"><strong>Eu começo entendendo o que você vende</strong>, quem queremos atrair, quais serviços precisam aparecer mais, quais provas já existem e quais assuntos fazem sentido para o seu público,</span>
+<span class="reading-chunk"> <strong>depois organizo bio, CTA, destaques</strong>, conteúdos fixados, apresentação dos serviços e a direção que vai orientar os próximos conteúdos.</span>
+</p>
+<p><strong>A produção já começa nesse primeiro mês</strong>, então você não passa 30 dias recebendo documento e esperando a estratégia terminar para começar a publicar.</p>
+</div>
+</div>
 </section>
-
 <!-- SEÇÃO 5 -->
 <section class="section production" id="producao">
-    <div class="wrap">
-        <div class="wide-title reveal">
-            <h2>Nos outros 60 dias a gente continua produzindo e começa a usar os números para melhorar o conteúdo.</h2>
-        </div>
-
-        <div class="month-columns">
-            <p class="reveal"><strong>No segundo mês</strong> eu continuo criando pautas, roteiros, carrosséis e vídeos e começo a observar quais assuntos alcançam mais pessoas, quais formatos levam mais gente até o perfil e quais conteúdos geram mais interesse pelo seu trabalho.</p>
-
-            <p class="reveal"><strong>No terceiro mês</strong> a produção continua, mas agora já conseguimos repetir os assuntos que mostraram potencial, testar novos ângulos, diminuir o que não funcionou e tomar decisões usando o que aconteceu no seu próprio perfil.</p>
-        </div>
-    </div>
+<div class="wrap">
+<div class="wide-title reveal">
+<h2>Nos outros 60 dias a gente continua produzindo e começa a usar os números para melhorar o conteúdo.</h2>
+</div>
+<div class="month-columns">
+<p class="reveal"><strong>No segundo mês</strong> eu continuo criando pautas, roteiros, carrosséis, posts estáticos e vídeos. Também começo a observar quais assuntos alcançam mais pessoas, quais formatos levam mais gente até o perfil e quais conteúdos geram mais interesse pelo seu trabalho.</p>
+<p class="reveal"><strong>No terceiro mês</strong> a produção continua, mas agora já conseguimos repetir os assuntos que mostraram potencial, testar novos ângulos, diminuir o que não funcionou e tomar decisões usando o que aconteceu no seu próprio perfil.</p>
+</div>
+</div>
 </section>
-
 <!-- SEÇÃO 6 -->
 <section class="section responsibilities reading-section" id="secao-6">
-    <div class="wrap split">
-        <div class="reveal">
-            <h2>Você continua aparecendo nos conteúdos e eu cuido da estrutura por trás.</h2>
-        </div>
-
-        <div class="prose reveal">
-            <p>
-                <span class="reading-chunk"><strong>Eu fico responsável pela direção</strong>, planejamento, ideias, roteiros, criação dos carrosséis, edição dos vídeos previstos no projeto, organização do calendário e análise do que está funcionando,</span>
-                <span class="reading-chunk"> <strong>enquanto você entra principalmente</strong> com o conhecimento sobre o seu trabalho, materiais que eu precisar e a gravação dos vídeos quando sua presença for necessária.</span>
-            </p>
-
-            <p><strong>Nos projetos remotos</strong> eu envio toda a direção de gravação e você me manda o material bruto, e quando houver necessidade de captação presencial nós organizamos isso separadamente conforme a cidade e o projeto.</p>
-        </div>
-    </div>
+<div class="wrap split">
+<div class="reveal">
+<h2>Você continua aparecendo nos conteúdos e eu cuido da estrutura por trás.</h2>
+</div>
+<div class="prose reveal"><p>Eu fico responsável pela direção, planejamento, ideias, roteiros, criação dos carrosséis e posts estáticos, edição dos vídeos previstos no projeto, organização do calendário e análise do que está funcionando.</p><p>Você entra principalmente com o conhecimento sobre seu trabalho, as informações necessárias para desenvolver os conteúdos e a gravação dos vídeos quando sua presença for necessária.</p><p>Nos projetos remotos eu envio as orientações de gravação e você me manda o material bruto. Quando houver necessidade de captação presencial, nós organizamos isso separadamente, conforme a cidade e o projeto.</p><p>Os conteúdos passam por etapas de planejamento, produção e aprovação antes da publicação. O projeto inclui uma rodada de ajustes por conteúdo, dentro do direcionamento aprovado, para manter a qualidade e cumprir o calendário.</p></div>
+</div>
 </section>
-
-<!-- SEÇÃO 7 -->
-<section class="section included reading-section" id="entregas">
-    <div class="wrap split">
-        <div class="reveal">
-            <h2>O que está incluído nos 90 dias.</h2>
+<!-- SEÇÃO 7 — ENTREGAS INTERATIVAS -->
+<section class="section included included-orbit" id="entregas">
+  <div class="wrap">
+    <header class="orbit-heading reveal">
+      <span class="orbit-eyebrow">O QUE ESTÁ INCLUÍDO</span>
+      <h2>O que eu assumo durante os seus 90 dias.</h2>
+      <p>Explore cada entrega do projeto e veja como o trabalho acontece durante os 90 dias.</p>
+    </header>
+    <div class="orbit-layout reveal">
+      <div class="orbit-universe" aria-label="Cinco áreas do projeto, em movimento contínuo. Clique em cada uma para ver os detalhes.">
+        <div class="orbit-ambient orbit-ambient-one" aria-hidden="true"></div>
+        <div class="orbit-ambient orbit-ambient-two" aria-hidden="true"></div>
+        <div class="orbit-ring" aria-hidden="true"></div>
+        <div class="orbit-satellite" aria-hidden="true"></div>
+        <div class="orbit-center" aria-hidden="true">
+          <div class="orbit-core"><strong>MARCA<br>PESSOAL</strong></div>
         </div>
-
-        <div class="prose reveal">
-            <p>
-                <span class="reading-chunk">O projeto inclui organização completa do perfil no primeiro mês, posicionamento e direção da comunicação, bio, CTA, destaques, conteúdos fixados,</span>
-                <span class="reading-chunk"> planejamento mensal, <strong>8 conteúdos principais por mês</strong> entre Reels e carrosséis, roteiros, criação das peças, edição dos vídeos previstos, orientação para Stories, acompanhamento das principais métricas e reuniões de planejamento e análise.</span>
-            </p>
-
-            <p>Ao longo do trimestre são <strong>24 conteúdos principais</strong> produzidos dentro de uma estratégia que vai sendo ajustada conforme o perfil começa a responder.</p>
+        <div class="orbit-track">
+          <button type="button" class="orbit-node is-active" style="--x:50%;--y:7%;--delay:0s" data-orbit="estrategia" aria-pressed="true" aria-label="Estratégia e posicionamento"><span class="node-icon" aria-hidden="true">✦</span><strong>Estratégia</strong><small>e posicionamento</small></button>
+          <button type="button" class="orbit-node" style="--x:90.89%;--y:36.71%;--delay:-1s" data-orbit="videos" aria-pressed="false"><span class="node-icon" aria-hidden="true">▶</span><strong>Vídeos</strong><small>roteiro + edição</small></button>
+          <button type="button" class="orbit-node" style="--x:75.27%;--y:84.79%;--delay:-2s" data-orbit="banners" aria-pressed="false"><span class="node-icon" aria-hidden="true">▤</span><strong>Banners</strong><small>carrosséis + posts</small></button>
+          <button type="button" class="orbit-node" style="--x:24.73%;--y:84.79%;--delay:-3s" data-orbit="organizacao" aria-pressed="false"><span class="node-icon" aria-hidden="true">▦</span><strong>Organização</strong><small>calendário</small></button>
+          <button type="button" class="orbit-node" style="--x:9.11%;--y:36.71%;--delay:-4s" data-orbit="acompanhamento" aria-pressed="false"><span class="node-icon" aria-hidden="true">⌁</span><strong>Análise</strong><small>mensal</small></button>
         </div>
+      </div>
+      <div class="orbit-details" aria-live="polite" aria-atomic="true">
+        <div class="orbit-details-top"><span class="orbit-step" id="orbit-index">01 / 05</span><span class="orbit-detail-label" id="orbit-type">ESTRATÉGIA E POSICIONAMENTO</span></div>
+        <div id="orbit-detail-content">
+          <span class="orbit-detail-kicker">A BASE DO PROJETO</span>
+          <h3>Seu perfil precisa mostrar o valor do trabalho que você já faz.</h3>
+          <p class="orbit-detail-lead">Eu começo entendendo seus serviços, as pessoas que você quer atender e o que já diferencia seu trabalho. A partir disso, organizo a apresentação do perfil e defino a direção dos conteúdos para os próximos 90 dias.</p>
+          <div class="orbit-deliveries">
+            <div class="orbit-delivery"><span class="orbit-delivery-mark">01</span><span>Posicionamento e prioridades de comunicação</span></div>
+            <div class="orbit-delivery"><span class="orbit-delivery-mark">02</span><span>Bio, chamada para ação e destaques reorganizados</span></div>
+            <div class="orbit-delivery"><span class="orbit-delivery-mark">03</span><span>Serviços e conteúdos fixados apresentados com clareza</span></div>
+          </div>
+        </div>
+        <div class="orbit-details-bottom"><button type="button" class="orbit-next" aria-label="Ver a próxima entrega">Próxima <span class="arrow" aria-hidden="true">↗</span></button></div>
+      </div>
     </div>
+    <div class="orbit-summary reveal"><div><strong>36 conteúdos</strong><span>em 90 dias</span></div><div><strong>12 por mês</strong><span>8 vídeos · 2 carrosséis · 2 posts estáticos</span></div><div><strong>1 reunião</strong><span>mensal de planejamento e análise</span></div></div>
+    <div class="orbit-exclusions reveal">
+      <button class="orbit-exclusions-toggle" type="button" aria-expanded="false" aria-controls="orbit-exclusions-body"><span>O que não está incluído no escopo mensal</span><span class="exclusion-plus" aria-hidden="true">+</span></button>
+      <div class="orbit-exclusions-body" id="orbit-exclusions-body" hidden><p>Captação presencial de vídeos, gestão de anúncios pagos, criação de sites, campanhas de lançamento e <strong>quaisquer outras peças de design ou comunicação não descritas no escopo mensal</strong>.</p><p>Outros serviços podem ser avaliados e contratados separadamente.</p></div>
+    </div>
+  </div>
 </section>
-
 <!-- SEÇÃO 8 -->
 <section class="section audience reading-section" id="secao-8">
-    <div class="wrap split">
-        <div class="reveal">
-            <h2>Esse projeto faz mais sentido para quem já tem um bom serviço e sabe que poderia mostrar muito melhor o próprio trabalho na internet.</h2>
-        </div>
-
-        <div class="prose reveal">
-            <p>Eu trabalho principalmente com profissionais liberais, clínicas, arquitetos, consultores, especialistas e empresas de serviços que precisam de uma presença digital mais bem cuidada e de uma produção que não dependa de começar do zero toda semana.</p>
-
-            <p><strong>Você precisa ter disponibilidade para gravar</strong> quando o conteúdo pedir sua presença, me passar as informações necessárias e aprovar os materiais dentro dos prazos combinados.</p>
-        </div>
-    </div>
+<div class="wrap split">
+<div class="reveal">
+<h2>Esse projeto faz mais sentido para quem já tem um bom serviço e sabe que poderia mostrar muito melhor o próprio trabalho na internet.</h2>
+</div>
+<div class="prose reveal">
+<p>Eu trabalho principalmente com profissionais liberais, clínicas, arquitetos, consultores, especialistas e empresas de serviços que precisam de uma presença digital mais bem cuidada e de uma produção que não dependa de começar do zero toda semana.</p>
+<p><strong>Você precisa ter disponibilidade para gravar</strong> quando o conteúdo pedir sua presença, me passar as informações necessárias e aprovar os materiais dentro dos prazos combinados.</p>
+</div>
+</div>
 </section>
-
 <!-- SEÇÃO 9 -->
 <section class="section investment" id="investimento">
-    <div class="wrap">
-        <div class="wide-title reveal">
-            <h2>Você pode contratar o projeto completo de 90 dias ou apenas a organização inicial.</h2>
-        </div>
-
-        <div class="investment-options reveal">
-            <p>O projeto completo custa <strong>R$7.500 ou 3x de R$2.500</strong> e inclui a organização do primeiro mês mais dois meses de estratégia, produção, análise e ajustes.</p>
-
-            <p>Se você quiser apenas a etapa inicial de 30 dias, o investimento é de <strong>R$3.500</strong> e inclui posicionamento, organização do perfil e estrutura inicial de conteúdo sem os dois meses seguintes de produção.</p>
-        </div>
-    </div>
+<div class="wrap">
+<div class="wide-title reveal">
+<h2>Durante 90 dias, você tem alguém cuidando da estratégia e da produção dos seus conteúdos.</h2>
+</div>
+<div class="investment-options reveal"><p>O investimento para o projeto completo é de <strong>R$ 7.500, em 3 parcelas de R$ 2.500.</strong> Esse valor inclui a organização inicial do perfil, planejamento estratégico, produção dos 36 conteúdos previstos, acompanhamento das publicações e análise mensal dos resultados.<br/><br/>Você não precisa contratar diferentes profissionais para planejar os conteúdos, escrever os roteiros, editar os vídeos e criar as peças do seu Instagram. Eu assumo essas etapas dentro de um processo organizado, com calendário definido e acompanhamento durante os 90 dias.</p></div>
+</div>
 </section>
-
 <!-- SEÇÃO 10 -->
 <section class="section about" id="secao-10">
-    <div class="wrap about-layout">
-        <figure class="portrait about-portrait reveal">
-            <div class="portrait-placeholder" aria-hidden="true">
-                <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.2">
-                    <circle cx="40" cy="28" r="12"></circle>
-                    <path d="M17 66c0-15 10-23 23-23s23 8 23 23"></path>
-                    <rect x="6" y="6" width="68" height="68" rx="6"></rect>
-                </svg>
-            </div>
-
-            <img
-                src="fotoSobre.jpg"
-                alt="Ian Henrique"
-                decoding="async"
-                loading="lazy"
-                onload="this.parentElement.classList.add('loaded')"
-                onerror="this.hidden=true"
-            >
-        </figure>
-
-        <div class="about-content">
-            <div class="reveal">
-                <h2>Quem vai cuidar do seu projeto.</h2>
-            </div>
-
-            <div class="prose reveal">
-                <p>Trabalho com marketing digital desde 2022, comecei dentro de uma produtora participando de projetos e lançamentos digitais, depois passei um ano e cinco meses no marketing da West Imob e nos últimos anos fui direcionando meu trabalho para posicionamento, conteúdo e crescimento de profissionais e empresas.</p>
-
-                <p>Hoje trabalho com poucos projetos ao mesmo tempo porque quero participar de perto da estratégia, da produção e das decisões que vão sendo tomadas durante o período.</p>
-            </div>
-        </div>
-    </div>
+<div class="wrap about-layout">
+<figure class="portrait about-portrait reveal">
+<div aria-hidden="true" class="portrait-placeholder">
+<svg fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 80 80">
+<circle cx="40" cy="28" r="12"></circle>
+<path d="M17 66c0-15 10-23 23-23s23 8 23 23"></path>
+<rect height="68" rx="6" width="68" x="6" y="6"></rect>
+</svg>
+</div>
+<img alt="Ian Henrique" decoding="async" loading="lazy" onerror="this.hidden=true" onload="this.parentElement.classList.add('loaded')" src="fotoSobre.jpg"/>
+</figure>
+<div class="about-content">
+<div class="reveal">
+<h2>Quem vai cuidar do seu projeto.</h2>
+</div>
+<div class="prose reveal">
+<p>Trabalho com marketing digital desde 2022, comecei dentro de uma produtora participando de projetos e lançamentos digitais, depois passei um ano e cinco meses no marketing da West Imob e nos últimos anos fui direcionando meu trabalho para posicionamento, conteúdo e crescimento de profissionais e empresas.</p>
+<p>Hoje trabalho com poucos projetos ao mesmo tempo porque quero participar de perto da estratégia, da produção e das decisões que vão sendo tomadas durante o período.</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- SEÇÃO 11 -->
 <section class="section final" id="conversa">
-    <div class="wrap final-copy reveal">
-        <h2>Quer saber o que eu mudaria primeiro no seu perfil.</h2>
-
-        <p>Clique no botão abaixo, me envie algumas informações sobre seu trabalho e o seu Instagram e eu vou analisar o perfil antes da nossa conversa.</p>
-
-        <p>Na reunião eu te mostro as primeiras coisas que trabalharia, explico como eu conduziria os próximos 90 dias e a gente entende se o projeto faz sentido para o seu momento.</p>
-
-        <a
-            class="button"
-            href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram."
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+<div class="wrap final-copy reveal">
+<h2>Quer saber o que eu mudaria primeiro no seu perfil.</h2>
+<p>Clique no botão abaixo, me envie algumas informações sobre seu trabalho e o seu Instagram e eu vou analisar o perfil antes da nossa conversa.</p>
+<p>Na reunião eu te mostro as primeiras coisas que trabalharia, explico como eu conduziria os próximos 90 dias e a gente entende se o projeto faz sentido para o seu momento.</p>
+<a class="button" href="https://wa.me/5577999645052?text=Ol%C3%A1%2C%20Ian%21%20Quero%20conversar%20sobre%20meu%20projeto%20e%20meu%20perfil%20no%20Instagram." rel="noopener noreferrer" target="_blank">
             Quero conversar sobre meu perfil.
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14m-6-6 6 6-6 6"></path>
-            </svg>
-        </a>
-    </div>
+            <svg aria-hidden="true" fill="none" height="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="17">
+<path d="M5 12h14m-6-6 6 6-6 6"></path>
+</svg>
+</a>
+</div>
 </section>
-
 <footer class="footer">
-    <div class="wrap">
+<div class="wrap">
         © <span id="year"></span> Ian Henrique.
     </div>
 </footer>
-
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -1422,7 +1479,54 @@ document.getElementById("year").textContent = new Date().getFullYear();
         );
     }
 })();
-</script>
 
+// Sistema interativo de entregas — seleção manual e prévia automática discreta.
+(() => {
+  const deliverables = {
+    estrategia:{index:'01 / 05',type:'ESTRATÉGIA E POSICIONAMENTO',eyebrow:'A BASE DO PROJETO',title:'Seu perfil precisa mostrar o valor do trabalho que você já faz.',lead:'Eu começo entendendo seus serviços, as pessoas que você quer atender e o que já diferencia seu trabalho. A partir disso, organizo a apresentação do perfil e defino a direção dos conteúdos para os próximos 90 dias.',items:['Posicionamento e prioridades de comunicação','Bio, chamada para ação e destaques reorganizados','Serviços e conteúdos fixados apresentados com clareza']},
+    videos:{index:'02 / 05',type:'CONTEÚDO EM VÍDEO',eyebrow:'VÍDEOS TODOS OS MESES',title:'Seu conhecimento, transformado em vídeos que as pessoas entendem.',lead:'Em cada mês, preparo oito roteiros a partir de assuntos que você domina e de dúvidas que seu público realmente tem. Você grava com orientações claras; eu edito, organizo as legendas e deixo os vídeos prontos para aprovação.',items:['Escolha de pautas com intenção e relevância para o público','Oito roteiros e orientações práticas para gravação','Edição, legendas e revisão antes do agendamento']},
+    banners:{index:'03 / 05',type:'CARROSSÉIS E POSTS ESTÁTICOS',eyebrow:'4 PEÇAS POR MÊS',title:'O que torna seu trabalho diferente também precisa aparecer no feed.',lead:'Produzo dois carrosséis para explicar assuntos importantes com profundidade e dois posts estáticos para apresentar serviços, diferenciais ou mensagens que merecem destaque. Tudo com texto e design alinhados ao posicionamento.',items:['2 carrosséis com pesquisa, copy e design','2 posts estáticos com mensagem, copy e design','Legendas e materiais finalizados para aprovação']},
+    organizacao:{index:'04 / 05',type:'CALENDÁRIO E PUBLICAÇÃO',eyebrow:'PRODUÇÃO ORGANIZADA',title:'Você recebe os roteiros antes de precisar gravar.',lead:'Os conteúdos deixam de depender de decisões de última hora. Eu organizo pautas, datas de gravação, entregas para aprovação e publicações num calendário que você pode acompanhar.',items:['Calendário mensal com temas, formatos e datas','Orientações para gravação e direcionamento de Stories','Agendamento dos conteúdos depois da aprovação']},
+    acompanhamento:{index:'05 / 05',type:'MÉTRICAS E DECISÕES',eyebrow:'ANÁLISE MENSAL',title:'Cada mês ajuda a decidir melhor o próximo.',lead:'Eu observo quais temas atraíram atenção, quais publicações levaram visitantes ao perfil e o que gerou interesse pelo seu trabalho. Com esses dados, ajusto o próximo planejamento sem ficar repetindo conteúdo por hábito.',items:['Acompanhamento das métricas disponíveis no perfil','Uma reunião mensal para analisar os resultados','Decisões sobre novos temas, formatos e ajustes']}
+  };
+  const nodes=[...document.querySelectorAll('[data-orbit]')];
+  const content=document.getElementById('orbit-detail-content');
+  const index=document.getElementById('orbit-index');
+  const type=document.getElementById('orbit-type');
+  const next=document.querySelector('.orbit-next');
+  const section=document.getElementById('entregas');
+  if(!nodes.length||!content||!index||!type||!section)return;
+  const keys=nodes.map(node=>node.dataset.orbit);
+  const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  let current='estrategia',manuallySelected=false;
+  function choose(key,manual=false){
+    const item=deliverables[key];if(!item)return;
+    current=key;
+    if(manual)manuallySelected=true;
+    nodes.forEach(node=>{const selected=node.dataset.orbit===key;node.classList.toggle('is-active',selected);node.setAttribute('aria-pressed',String(selected));});
+    index.textContent=item.index;type.textContent=item.type;
+    content.innerHTML=`<span class="orbit-detail-kicker">${esc(item.eyebrow)}</span><h3>${esc(item.title)}</h3><p class="orbit-detail-lead">${esc(item.lead)}</p><div class="orbit-deliveries">${item.items.map((description,i)=>`<div class="orbit-delivery"><span class="orbit-delivery-mark">0${i+1}</span><span>${esc(description)}</span></div>`).join('')}</div>`;
+    content.classList.remove('detail-enter');void content.offsetWidth;content.classList.add('detail-enter');
+  }
+  nodes.forEach(node=>node.addEventListener('click',()=>choose(node.dataset.orbit,true)));
+  if(next)next.addEventListener('click',()=>choose(keys[(keys.indexOf(current)+1)%keys.length],true));
+  // Apresentação automática inicial, interrompida ao primeiro toque/clique ou foco.
+  const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  let visible=false;
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{visible=entries[0]?.isIntersecting??false;},{threshold:.28});
+    observer.observe(section);
+  }else{visible=true;}
+  if(!reduceMotion.matches){
+    const timer=window.setInterval(()=>{
+      if(manuallySelected||!visible||section.matches(':hover')||section.contains(document.activeElement)){if(manuallySelected)clearInterval(timer);return;}
+      choose(keys[(keys.indexOf(current)+1)%keys.length]);
+    },8500);
+  }
+  const toggle=document.querySelector('.orbit-exclusions-toggle');
+  const body=document.getElementById('orbit-exclusions-body');
+  if(toggle&&body)toggle.addEventListener('click',()=>{const expanded=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!expanded));body.hidden=expanded;});
+})();
+</script>
 </body>
 </html>
