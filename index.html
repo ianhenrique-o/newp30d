@@ -971,13 +971,13 @@ p strong {
 .orbit-satellite:before{content:"";position:absolute;width:9px;height:9px;top:-4px;left:calc(50% - 4px);border-radius:50%;background:#687c64;box-shadow:0 0 0 6px #7a907625,0 0 27px #5c755686}
 @keyframes satellite-turn{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .orbit-hint{display:none!important}
-.orbit-details{position:relative;overflow:hidden;isolation:isolate;min-height:476px;padding:32px 33px 27px;display:flex;flex-direction:column;background:radial-gradient(circle at 85% 8%,#455342,#273229 35%,#1b231e 85%);color:#f3f2e9;border:none;border-radius:13px;box-shadow:0 30px 72px #1a231924}
+.orbit-details{position:relative;overflow:hidden;isolation:isolate;min-height:340px;padding:32px 33px 27px;display:flex;flex-direction:column;background:radial-gradient(circle at 85% 8%,#455342,#273229 35%,#1b231e 85%);color:#f3f2e9;border:none;border-radius:13px;box-shadow:0 30px 72px #1a231924}
 .orbit-details:before{content:"";position:absolute;inset:-38% -65% auto auto;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#aab8a41c 0%,transparent 66%);pointer-events:none;animation:nebula-drift 10s ease-in-out infinite alternate}
 .orbit-details:after{content:"";position:absolute;inset:auto -85px -180px auto;width:270px;height:270px;border-radius:50%;background:radial-gradient(circle,#a3b99a19,transparent 65%);pointer-events:none}
 .orbit-details>*{position:relative;z-index:1}
 .orbit-details-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font:650 10px/1.4 Inter,Arial,sans-serif;letter-spacing:1.3px;color:#c2d0bc}
 .orbit-step{padding:8px 11px;border-radius:99px;background:#ffffff16;color:#eef5e9;white-space:nowrap}
-.orbit-detail-label{color:#b3c2af;text-transform:uppercase;text-align:right}
+.orbit-detail-label{color:#b3c2af;text-transform:uppercase;text-align:left}
 #orbit-detail-content{padding:20px 0 18px;flex:1}
 #orbit-detail-content.detail-enter{animation:detail-shift .48s cubic-bezier(.2,.7,.2,1) both}
 @keyframes detail-shift{from{opacity:0;transform:translateY(14px);filter:blur(3px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
@@ -992,20 +992,21 @@ p strong {
 .orbit-next{appearance:none;border:1px solid #a9c4a14d;background:#b9d0b4;color:#1b2a1d;padding:11px 13px;border-radius:99px;font:650 11px/1.3 Inter,Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:12px;transition:transform .25s,background .25s,box-shadow .25s;white-space:nowrap}
 .orbit-next:hover{background:#d3e3ce;transform:translateY(-2px);box-shadow:0 8px 20px #0002}
 .orbit-next:focus-visible{outline:2px solid #eaf8e6;outline-offset:3px}
-.orbit-next .arrow{font-size:15px}
+.orbit-next .arrow{font-size:20px}
+#entregas .orbit-next{width:44px;height:44px;padding:0;justify-content:center}
 /* Números editoriais: sem divisórias verticais ou horizontais */
-.orbit-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;max-width:1120px;margin:37px auto 0;border:none}
-.orbit-summary>div{border:0!important;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:18px 10px;text-align:center}
-.orbit-summary strong{font:400 35px/1.12 "DM Serif Display",Georgia,serif;letter-spacing:-.5px;color:#273027}
-.orbit-summary span{font:400 12px/1.6 Inter,Arial,sans-serif;color:#73776c}
+.orbit-summary{display:grid;grid-template-columns:.85fr 1.25fr 1fr;gap:12px;width:100%;max-width:720px;margin:80px auto 0;border:none}
+.orbit-summary>div{border:0!important;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:9px 4px;text-align:center}
+.orbit-summary strong{font:400 25px/1.12 "DM Serif Display",Georgia,serif;letter-spacing:-.5px;color:#273027}
+.orbit-summary span{font:400 11px/1.5 Inter,Arial,sans-serif;color:#73776c}
 /* Escopo expandível sem bordas e sem linha inferior */
-.orbit-exclusions{max-width:910px;margin:15px auto 0;border:0!important}
-.orbit-exclusions-toggle{display:flex;justify-content:space-between;align-items:center;width:100%;padding:19px 24px;border:none;border-radius:10px;background:#d8dbd0;color:#30392f;text-align:left;font:600 13px/1.5 Inter,Arial,sans-serif;cursor:pointer;transition:background .22s}
+.orbit-exclusions{max-width:680px;margin:10px auto 0;border:0!important}
+.orbit-exclusions-toggle{display:flex;justify-content:space-between;align-items:center;width:100%;padding:13px 18px;border:none;border-radius:8px;background:#d8dbd0;color:#30392f;text-align:left;font:500 12px/1.5 Inter,Arial,sans-serif;cursor:pointer;transition:background .22s}
 .orbit-exclusions-toggle:hover{background:#cdd4c6}
 .orbit-exclusions-toggle:focus-visible{outline:3px solid #6d8569;outline-offset:4px}
 .exclusion-plus{display:grid;place-items:center;font-size:21px;font-weight:400;width:23px;height:23px;transition:transform .25s}
 .orbit-exclusions-toggle[aria-expanded="true"] .exclusion-plus{transform:rotate(45deg)}
-.orbit-exclusions-body{padding:18px 23px 12px;max-width:910px}
+.orbit-exclusions-body{padding:14px 18px 8px;max-width:680px}
 .orbit-exclusions-body[hidden]{display:none}
 .orbit-exclusions-body p{font:400 13px/1.75 Inter,Arial,sans-serif;color:#50564c;margin:0 0 9px}
 /* Mantém a correção previamente aprovada para investimento */
@@ -1015,7 +1016,7 @@ p strong {
 .investment-options{grid-template-columns:minmax(0,1fr);max-width:940px;margin:0 auto}
 .investment-options p{max-width:none;text-align:center;padding:55px 65px;line-height:1.85;margin:0;border-radius:7px}
 @media(max-width:1220px){.orbit-layout{gap:8px;grid-template-columns:minmax(0,1fr) minmax(310px,.85fr)}.orbit-universe{transform:scale(.87);transform-origin:center;margin:-36px -30px}}
-@media(max-width:950px){.orbit-layout{grid-template-columns:1fr;max-width:720px;gap:10px}.orbit-universe{width:100%;max-width:650px;margin:0 auto;transform:none;height:605px}.orbit-details{width:min(100%,600px);min-height:410px;margin:auto}.included-orbit .wrap{width:min(100% - 48px,780px)}.orbit-heading{margin-bottom:12px}}
+@media(max-width:950px){.orbit-layout{grid-template-columns:1fr;max-width:720px;gap:10px}.orbit-universe{width:100%;max-width:650px;margin:0 auto;transform:none;height:605px}.orbit-details{width:min(100%,600px);min-height:340px;margin:auto}.included-orbit .wrap{width:min(100% - 48px,780px)}.orbit-heading{margin-bottom:12px}}
 @media(max-width:760px){
   .included-orbit{padding:72px 0 75px}.included-orbit .wrap{width:calc(100% - 36px)}
   .orbit-heading h2{font-size:clamp(34px,9vw,42px)}.orbit-heading p{font-size:14px}
@@ -1025,11 +1026,11 @@ p strong {
   .orbit-node{position:static;left:auto;top:auto;transform:none!important;animation:mobile-bob 6s ease-in-out infinite!important;animation-delay:var(--delay)!important;width:100%;height:103px;border-radius:13px;gap:6px;box-shadow:0 8px 18px #273a2615}
   .orbit-node strong{font-size:12px}.orbit-node small{font-size:10px}.orbit-node .node-icon{font-size:19px}
   .orbit-node:last-child{grid-column:1 / -1;max-width:100%;height:88px}
-  .orbit-details{margin-top:17px;min-height:445px;padding:27px 23px 25px;border-radius:12px}
+  .orbit-details{margin-top:17px;min-height:320px;padding:27px 23px 25px;border-radius:12px}
   #orbit-detail-content h3{font-size:33px}.orbit-details-bottom{align-items:center}.orbit-details-bottom .orbit-subnote{font-size:10px}
-  .orbit-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;margin-top:22px}
-  .orbit-summary>div{padding:13px 7px}.orbit-summary>div:last-child{grid-column:1/-1}.orbit-summary strong{font-size:28px}.orbit-summary span{font-size:11px}
-  .orbit-exclusions{margin-top:18px}.orbit-exclusions-toggle{padding:17px 16px}
+  .orbit-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;width:calc(100% - 24px);max-width:480px;margin-top:60px}
+  .orbit-summary>div{padding:7px 4px}.orbit-summary>div:last-child{grid-column:1/-1}.orbit-summary strong{font-size:22px}.orbit-summary span{font-size:11px}
+  .orbit-exclusions{width:calc(100% - 24px);max-width:480px;margin-top:10px}.orbit-exclusions-toggle{padding:12px 14px}
   .investment{padding:80px 0 90px}.investment .wide-title{margin-bottom:28px}.investment-options p{padding:32px 25px;text-align:center;font-size:15px}
 }
 @keyframes mobile-bob{0%,100%{translate:0 0}50%{translate:0 -3px}}
@@ -1287,7 +1288,7 @@ p strong {
 <div class="reveal">
 <h2>Você continua aparecendo nos conteúdos e eu cuido da estrutura por trás.</h2>
 </div>
-<div class="prose reveal"><p>Eu fico responsável pela direção, planejamento, ideias, roteiros, criação dos carrosséis e posts estáticos, edição dos vídeos previstos no projeto, organização do calendário e análise do que está funcionando.</p><p>Você entra principalmente com o conhecimento sobre seu trabalho, as informações necessárias para desenvolver os conteúdos e a gravação dos vídeos quando sua presença for necessária.</p><p>Nos projetos remotos eu envio as orientações de gravação e você me manda o material bruto. Quando houver necessidade de captação presencial, nós organizamos isso separadamente, conforme a cidade e o projeto.</p><p>Os conteúdos passam por etapas de planejamento, produção e aprovação antes da publicação. O projeto inclui uma rodada de ajustes por conteúdo, dentro do direcionamento aprovado, para manter a qualidade e cumprir o calendário.</p></div>
+<div class="prose reveal"><p><strong>Eu fico responsável pela direção, planejamento, ideias, roteiros, criação dos carrosséis e posts estáticos, edição dos vídeos previstos no projeto, organização do calendário e análise do que está funcionando.</strong></p><p>Você entra principalmente com o conhecimento sobre seu trabalho, as informações necessárias para desenvolver os conteúdos e a gravação dos vídeos quando sua presença for necessária.</p><p>Nos projetos remotos eu envio as orientações de gravação e você me manda o material bruto. Quando houver necessidade de captação presencial, nós organizamos isso separadamente, conforme a cidade e o projeto.</p><p>Os conteúdos passam por etapas de planejamento, produção e aprovação antes da publicação. O projeto inclui uma rodada de ajustes por conteúdo, dentro do direcionamento aprovado, para manter a qualidade e cumprir o calendário.</p></div>
 </div>
 </section>
 <!-- SEÇÃO 7 — ENTREGAS INTERATIVAS -->
@@ -1295,8 +1296,8 @@ p strong {
   <div class="wrap">
     <header class="orbit-heading reveal">
       <span class="orbit-eyebrow">O QUE ESTÁ INCLUÍDO</span>
-      <h2>O que eu assumo durante os seus 90 dias.</h2>
-      <p>Explore cada entrega do projeto e veja como o trabalho acontece durante os 90 dias.</p>
+      <h2>Você cuida de cada detalhe do seu trabalho. Isso precisa aparecer no seu Instagram.</h2>
+      <p>Durante 90 dias, vamos mostrar o que seus clientes já valorizam em você para quem ainda está decidindo com quem marcar.</p>
     </header>
     <div class="orbit-layout reveal">
       <div class="orbit-universe" aria-label="Cinco áreas do projeto, em movimento contínuo. Clique em cada uma para ver os detalhes.">
@@ -1310,24 +1311,18 @@ p strong {
         <div class="orbit-track">
           <button type="button" class="orbit-node is-active" style="--x:50%;--y:7%;--delay:0s" data-orbit="estrategia" aria-pressed="true" aria-label="Estratégia e posicionamento"><span class="node-icon" aria-hidden="true">✦</span><strong>Estratégia</strong><small>e posicionamento</small></button>
           <button type="button" class="orbit-node" style="--x:90.89%;--y:36.71%;--delay:-1s" data-orbit="videos" aria-pressed="false"><span class="node-icon" aria-hidden="true">▶</span><strong>Vídeos</strong><small>roteiro + edição</small></button>
-          <button type="button" class="orbit-node" style="--x:75.27%;--y:84.79%;--delay:-2s" data-orbit="banners" aria-pressed="false"><span class="node-icon" aria-hidden="true">▤</span><strong>Banners</strong><small>carrosséis + posts</small></button>
+          <button type="button" class="orbit-node" style="--x:75.27%;--y:84.79%;--delay:-2s" data-orbit="banners" aria-pressed="false"><span class="node-icon" aria-hidden="true">▤</span><strong>Carrosséis</strong><small>e posts</small></button>
           <button type="button" class="orbit-node" style="--x:24.73%;--y:84.79%;--delay:-3s" data-orbit="organizacao" aria-pressed="false"><span class="node-icon" aria-hidden="true">▦</span><strong>Organização</strong><small>calendário</small></button>
           <button type="button" class="orbit-node" style="--x:9.11%;--y:36.71%;--delay:-4s" data-orbit="acompanhamento" aria-pressed="false"><span class="node-icon" aria-hidden="true">⌁</span><strong>Análise</strong><small>mensal</small></button>
         </div>
       </div>
       <div class="orbit-details" aria-live="polite" aria-atomic="true">
-        <div class="orbit-details-top"><span class="orbit-step" id="orbit-index">01 / 05</span><span class="orbit-detail-label" id="orbit-type">ESTRATÉGIA E POSICIONAMENTO</span></div>
+        <div class="orbit-details-top"><span class="orbit-detail-label" id="orbit-type">ESTRATÉGIA E POSICIONAMENTO</span></div>
         <div id="orbit-detail-content">
-          <span class="orbit-detail-kicker">A BASE DO PROJETO</span>
-          <h3>Seu perfil precisa mostrar o valor do trabalho que você já faz.</h3>
-          <p class="orbit-detail-lead">Eu começo entendendo seus serviços, as pessoas que você quer atender e o que já diferencia seu trabalho. A partir disso, organizo a apresentação do perfil e defino a direção dos conteúdos para os próximos 90 dias.</p>
-          <div class="orbit-deliveries">
-            <div class="orbit-delivery"><span class="orbit-delivery-mark">01</span><span>Posicionamento e prioridades de comunicação</span></div>
-            <div class="orbit-delivery"><span class="orbit-delivery-mark">02</span><span>Bio, chamada para ação e destaques reorganizados</span></div>
-            <div class="orbit-delivery"><span class="orbit-delivery-mark">03</span><span>Serviços e conteúdos fixados apresentados com clareza</span></div>
-          </div>
+          <h3>Quando indicarem você, seu perfil precisa estar à altura.</h3>
+          <p class="orbit-detail-lead">Uma pessoa recebe seu nome e abre seu Instagram antes de entrar em contato. Ali, ela precisa encontrar a experiência, o cuidado e os motivos que fizeram alguém recomendar você. É isso que vamos colocar em evidência.</p>
         </div>
-        <div class="orbit-details-bottom"><button type="button" class="orbit-next" aria-label="Ver a próxima entrega">Próxima <span class="arrow" aria-hidden="true">↗</span></button></div>
+        <div class="orbit-details-bottom"><button type="button" class="orbit-next" aria-label="Ver a próxima entrega" title="Próxima entrega"><span class="arrow" aria-hidden="true">→</span></button></div>
       </div>
     </div>
     <div class="orbit-summary reveal"><div><strong>36 conteúdos</strong><span>em 90 dias</span></div><div><strong>12 por mês</strong><span>8 vídeos · 2 carrosséis · 2 posts estáticos</span></div><div><strong>1 reunião</strong><span>mensal de planejamento e análise</span></div></div>
@@ -1483,19 +1478,38 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // Sistema interativo de entregas — seleção manual e prévia automática discreta.
 (() => {
   const deliverables = {
-    estrategia:{index:'01 / 05',type:'ESTRATÉGIA E POSICIONAMENTO',eyebrow:'A BASE DO PROJETO',title:'Seu perfil precisa mostrar o valor do trabalho que você já faz.',lead:'Eu começo entendendo seus serviços, as pessoas que você quer atender e o que já diferencia seu trabalho. A partir disso, organizo a apresentação do perfil e defino a direção dos conteúdos para os próximos 90 dias.',items:['Posicionamento e prioridades de comunicação','Bio, chamada para ação e destaques reorganizados','Serviços e conteúdos fixados apresentados com clareza']},
-    videos:{index:'02 / 05',type:'CONTEÚDO EM VÍDEO',eyebrow:'VÍDEOS TODOS OS MESES',title:'Seu conhecimento, transformado em vídeos que as pessoas entendem.',lead:'Em cada mês, preparo oito roteiros a partir de assuntos que você domina e de dúvidas que seu público realmente tem. Você grava com orientações claras; eu edito, organizo as legendas e deixo os vídeos prontos para aprovação.',items:['Escolha de pautas com intenção e relevância para o público','Oito roteiros e orientações práticas para gravação','Edição, legendas e revisão antes do agendamento']},
-    banners:{index:'03 / 05',type:'CARROSSÉIS E POSTS ESTÁTICOS',eyebrow:'4 PEÇAS POR MÊS',title:'O que torna seu trabalho diferente também precisa aparecer no feed.',lead:'Produzo dois carrosséis para explicar assuntos importantes com profundidade e dois posts estáticos para apresentar serviços, diferenciais ou mensagens que merecem destaque. Tudo com texto e design alinhados ao posicionamento.',items:['2 carrosséis com pesquisa, copy e design','2 posts estáticos com mensagem, copy e design','Legendas e materiais finalizados para aprovação']},
-    organizacao:{index:'04 / 05',type:'CALENDÁRIO E PUBLICAÇÃO',eyebrow:'PRODUÇÃO ORGANIZADA',title:'Você recebe os roteiros antes de precisar gravar.',lead:'Os conteúdos deixam de depender de decisões de última hora. Eu organizo pautas, datas de gravação, entregas para aprovação e publicações num calendário que você pode acompanhar.',items:['Calendário mensal com temas, formatos e datas','Orientações para gravação e direcionamento de Stories','Agendamento dos conteúdos depois da aprovação']},
-    acompanhamento:{index:'05 / 05',type:'MÉTRICAS E DECISÕES',eyebrow:'ANÁLISE MENSAL',title:'Cada mês ajuda a decidir melhor o próximo.',lead:'Eu observo quais temas atraíram atenção, quais publicações levaram visitantes ao perfil e o que gerou interesse pelo seu trabalho. Com esses dados, ajusto o próximo planejamento sem ficar repetindo conteúdo por hábito.',items:['Acompanhamento das métricas disponíveis no perfil','Uma reunião mensal para analisar os resultados','Decisões sobre novos temas, formatos e ajustes']}
-  };
+    "estrategia": {
+        "type": "ESTRATÉGIA E POSICIONAMENTO",
+        "title": "Quando indicarem você, seu perfil precisa estar à altura.",
+        "lead": "Uma pessoa recebe seu nome e abre seu Instagram antes de entrar em contato. Ali, ela precisa encontrar a experiência, o cuidado e os motivos que fizeram alguém recomendar você. É isso que vamos colocar em evidência."
+    },
+    "videos": {
+        "type": "VÍDEOS",
+        "title": "Conquistar confiança antes do primeiro atendimento.",
+        "lead": "Oito vídeos por mês, com roteiro e edição, para alcançar novas pessoas, criar conexão e despertar o interesse pelos seus serviços. Vamos testar assuntos e formatos para descobrir o que atrai seu público e o aproxima da contratação."
+    },
+    "banners": {
+        "type": "CARROSSÉIS E POSTS",
+        "title": "Criar identificação e confiança no seu trabalho.",
+        "lead": "Dois carrosséis e dois posts por mês para aprofundar assuntos, compartilhar bastidores e mostrar seu lado pessoal. Conteúdos para as pessoas conhecerem quem está por trás do atendimento, se identificarem com você e criarem confiança no seu trabalho."
+    },
+    "organizacao": {
+        "type": "ORGANIZAÇÃO",
+        "title": "Terminar o dia sem levar o Instagram como pendência.",
+        "lead": "Depois dos atendimentos, você também quer ter tempo para a sua vida. Eu assumo ideias, roteiros, edição e calendário. Sua participação fica concentrada em compartilhar sua experiência, gravar com orientação e aprovar os materiais."
+    },
+    "acompanhamento": {
+        "type": "ANÁLISE MENSAL",
+        "title": "Ter com quem decidir o próximo passo.",
+        "lead": "Todo mês, eu mostro o que despertou interesse, o que levou pessoas ao perfil e o que merece mudar. Você acompanha as decisões e entende por que estamos seguindo naquela direção com o seu nome e o seu trabalho."
+    }
+};
   const nodes=[...document.querySelectorAll('[data-orbit]')];
   const content=document.getElementById('orbit-detail-content');
-  const index=document.getElementById('orbit-index');
   const type=document.getElementById('orbit-type');
   const next=document.querySelector('.orbit-next');
   const section=document.getElementById('entregas');
-  if(!nodes.length||!content||!index||!type||!section)return;
+  if(!nodes.length||!content||!type||!section)return;
   const keys=nodes.map(node=>node.dataset.orbit);
   const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   let current='estrategia',manuallySelected=false;
@@ -1504,8 +1518,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
     current=key;
     if(manual)manuallySelected=true;
     nodes.forEach(node=>{const selected=node.dataset.orbit===key;node.classList.toggle('is-active',selected);node.setAttribute('aria-pressed',String(selected));});
-    index.textContent=item.index;type.textContent=item.type;
-    content.innerHTML=`<span class="orbit-detail-kicker">${esc(item.eyebrow)}</span><h3>${esc(item.title)}</h3><p class="orbit-detail-lead">${esc(item.lead)}</p><div class="orbit-deliveries">${item.items.map((description,i)=>`<div class="orbit-delivery"><span class="orbit-delivery-mark">0${i+1}</span><span>${esc(description)}</span></div>`).join('')}</div>`;
+    type.textContent=item.type;
+    content.innerHTML=`<h3>${esc(item.title)}</h3><p class="orbit-detail-lead">${esc(item.lead)}</p>`;
     content.classList.remove('detail-enter');void content.offsetWidth;content.classList.add('detail-enter');
   }
   nodes.forEach(node=>node.addEventListener('click',()=>choose(node.dataset.orbit,true)));
